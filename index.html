@@ -196,7 +196,9 @@
     .tcard-quote{font-size:.98rem;line-height:1.8;color:#94a3b8;flex:1;font-style:italic}
     .tcard-author{display:flex;align-items:center;gap:1rem;margin-top:auto;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.08)}
     @media(max-width:1024px){.testimonials-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:768px){.testimonials-grid{grid-template-columns:1fr}.testimonials-section{padding:4rem 0}.logo-track{gap:2rem}}
+    @media(max-width:768px){.logo-track{gap:2rem}}
+    @media(max-width:1024px){.t-grid{grid-template-columns:repeat(2,1fr)!important}}
+    @media(max-width:640px){.t-grid{grid-template-columns:1fr!important}}
     @media(max-width:768px){.yt-responsive-grid{grid-template-columns:1fr!important}}
   </style>
 </head>
@@ -392,13 +394,13 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class=”testimonials-section”>
+    <section style=”padding:8rem 0;background:linear-gradient(180deg,transparent 0%,rgba(16,155,170,0.06) 100%);”>
       <div class=”container”>
         <div class=”section-header fade-up”>
           <h2>What Our Graduates Say</h2>
           <p>Real results from real people who trained with The FCC in Edinburgh.</p>
         </div>
-        <div class=”testimonials-grid fade-up”>
+        <div class=”t-grid” style=”display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:4rem;”>
 
           <!-- Testimonial 1 -->
           <div style=”padding:2.4rem;display:flex;flex-direction:column;gap:1.2rem;background:rgba(255,255,255,0.07);border:1px solid rgba(30,230,253,0.35);border-radius:20px;box-shadow:0 8px 40px rgba(0,0,0,0.5);position:relative;overflow:hidden;”>
