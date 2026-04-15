@@ -185,20 +185,7 @@
     .logo-track img{height:44px;filter:grayscale(100%) brightness(180%) opacity(.75);transition:all .3s ease}
     .logo-track img:hover{filter:grayscale(0%) brightness(100%) opacity(1);transform:scale(1.05)}
 
-    /* Testimonials */
-    .testimonials-section{padding:8rem 0;background:linear-gradient(180deg,transparent 0%,rgba(16,155,170,.06) 100%)}
-    .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:4rem;opacity:1!important;transform:none!important}
-    .tcard{padding:2.4rem;display:flex;flex-direction:column;gap:1.2rem;background:rgba(255,255,255,.06);border:1px solid rgba(30,230,253,.3);border-radius:20px;box-shadow:0 8px 40px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.07);position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
-    .tcard:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.5),0 0 24px rgba(30,230,253,.12),inset 0 1px 0 rgba(255,255,255,.1)}
-    .tcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#00c9ff,#1ee6fd)}
-    .tcard-icon{font-size:2rem;color:#1ee6fd;opacity:.5;line-height:1}
-    .tcard-stars{display:flex;gap:.25rem;font-size:1rem;color:#f5c518}
-    .tcard-quote{font-size:.98rem;line-height:1.8;color:#94a3b8;flex:1;font-style:italic}
-    .tcard-author{display:flex;align-items:center;gap:1rem;margin-top:auto;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.08)}
-    @media(max-width:1024px){.testimonials-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:768px){.logo-track{gap:2rem}}
-    @media(max-width:1024px){.t-grid{grid-template-columns:repeat(2,1fr)!important}}
-    @media(max-width:640px){.t-grid{grid-template-columns:1fr!important}}
     @media(max-width:768px){.yt-responsive-grid{grid-template-columns:1fr!important}}
   </style>
 </head>
@@ -397,67 +384,7 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section style=”padding:8rem 0;background:#0d1117;position:relative;overflow:hidden;”>
-      <div style=”position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(30,230,253,0.3),transparent);”></div>
-      <div style=”position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(30,230,253,0.15),transparent);”></div>
-      <div style=”position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(30,230,253,0.04) 0%,transparent 70%);pointer-events:none;”></div>
-      <div class=”container”>
-
-        <div style=”text-align:center;margin-bottom:1rem;”>
-          <div style=”display:inline-block;background:rgba(30,230,253,0.08);border:1px solid rgba(30,230,253,0.25);border-radius:999px;padding:0.35rem 1.1rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:3px;font-weight:700;color:#1ee6fd;margin-bottom:1.5rem;”>Graduate Reviews</div>
-          <h2 style=”color:#f8fafc;font-size:clamp(1.8rem,3.5vw,2.6rem);margin:0 0 1rem;”>What Our Graduates Say</h2>
-          <p style=”color:#64748b;font-size:1rem;max-width:500px;margin:0 auto;”>Real outcomes from people who committed to their fitness career with The FCC.</p>
-        </div>
-
-        <!-- Star summary row -->
-        <div style=”display:flex;align-items:center;justify-content:center;gap:1rem;margin:2.5rem 0 4rem;”>
-          <div style=”color:#f5c518;font-size:1.3rem;letter-spacing:4px;”>★★★★★</div>
-          <div style=”width:1px;height:20px;background:rgba(255,255,255,0.15);”></div>
-          <div style=”color:#94a3b8;font-size:0.9rem;”>5.0 — 100% of graduates recommend The FCC</div>
-        </div>
-
-        <div style=”display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;”>
-
-          <!-- Card 1 -->
-          <div style=”background:rgba(255,255,255,0.06);border-radius:20px;border:1px solid rgba(30,230,253,0.35);padding:2.5rem;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.07);transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s;” onmouseover=”this.style.transform='translateY(-6px)';this.style.borderColor='rgba(30,230,253,0.55)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.6),0 0 20px rgba(30,230,253,0.1),inset 0 1px 0 rgba(255,255,255,0.1)';” onmouseout=”this.style.transform='translateY(0)';this.style.borderColor='rgba(30,230,253,0.35)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.07)';”>
-            <div style=”position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#00c9ff,#1ee6fd,#00c9ff);”></div>
-            <div style=”font-size:4.5rem;line-height:0.8;color:rgba(30,230,253,0.25);font-family:Georgia,serif;font-weight:700;margin-bottom:1.5rem;”>”</div>
-            <p style=”color:#cbd5e1;font-size:0.97rem;line-height:1.85;font-style:italic;margin:0 0 2rem;”>”The FCC Level 3 Course helped me get to where I am today — a confident Supervisor in charge of a team of 12 instructors. The course is well designed and I apply it all still to this day.”</p>
-            <div style=”border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;”>
-              <div style=”color:#f5c518;font-size:0.85rem;letter-spacing:3px;margin-bottom:0.75rem;”>★★★★★</div>
-              <div style=”color:#f8fafc;font-weight:700;font-size:0.95rem;”>Mikey Meechan</div>
-              <div style=”color:#1ee6fd;font-size:0.82rem;margin-top:0.2rem;”>Gym Supervisor, Edinburgh</div>
-            </div>
-          </div>
-
-          <!-- Card 2 — placeholder -->
-          <div style=”background:rgba(255,255,255,0.06);border-radius:20px;border:1px solid rgba(30,230,253,0.35);padding:2.5rem;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.07);transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s;” onmouseover=”this.style.transform='translateY(-6px)';this.style.borderColor='rgba(30,230,253,0.55)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.6),0 0 20px rgba(30,230,253,0.1),inset 0 1px 0 rgba(255,255,255,0.1)';” onmouseout=”this.style.transform='translateY(0)';this.style.borderColor='rgba(30,230,253,0.35)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.07)';”>
-            <div style=”position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#00c9ff,#1ee6fd,#00c9ff);”></div>
-            <div style=”font-size:4.5rem;line-height:0.8;color:rgba(30,230,253,0.25);font-family:Georgia,serif;font-weight:700;margin-bottom:1.5rem;”>”</div>
-            <p style=”color:#cbd5e1;font-size:0.97rem;line-height:1.85;font-style:italic;margin:0 0 2rem;”>”Add your second graduate quote here. Keep it authentic, specific, and outcome-focused — what changed in their career after completing the course?”</p>
-            <div style=”border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;”>
-              <div style=”color:#f5c518;font-size:0.85rem;letter-spacing:3px;margin-bottom:0.75rem;”>★★★★★</div>
-              <div style=”color:#f8fafc;font-weight:700;font-size:0.95rem;”>Graduate Name</div>
-              <div style=”color:#1ee6fd;font-size:0.82rem;margin-top:0.2rem;”>Role, Location</div>
-            </div>
-          </div>
-
-          <!-- Card 3 — placeholder -->
-          <div style=”background:rgba(255,255,255,0.06);border-radius:20px;border:1px solid rgba(30,230,253,0.35);padding:2.5rem;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.07);transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s;” onmouseover=”this.style.transform='translateY(-6px)';this.style.borderColor='rgba(30,230,253,0.55)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.6),0 0 20px rgba(30,230,253,0.1),inset 0 1px 0 rgba(255,255,255,0.1)';” onmouseout=”this.style.transform='translateY(0)';this.style.borderColor='rgba(30,230,253,0.35)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.07)';”>
-            <div style=”position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#00c9ff,#1ee6fd,#00c9ff);”></div>
-            <div style=”font-size:4.5rem;line-height:0.8;color:rgba(30,230,253,0.25);font-family:Georgia,serif;font-weight:700;margin-bottom:1.5rem;”>”</div>
-            <p style=”color:#cbd5e1;font-size:0.97rem;line-height:1.85;font-style:italic;margin:0 0 2rem;”>”Add your third graduate quote here. Keep it authentic, specific, and outcome-focused — what changed in their career after completing the course?”</p>
-            <div style=”border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;”>
-              <div style=”color:#f5c518;font-size:0.85rem;letter-spacing:3px;margin-bottom:0.75rem;”>★★★★★</div>
-              <div style=”color:#f8fafc;font-weight:700;font-size:0.95rem;”>Graduate Name</div>
-              <div style=”color:#1ee6fd;font-size:0.82rem;margin-top:0.2rem;”>Role, Location</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
+    <!-- Testimonials Section — removed pending fix -->
 
     <!-- YouTube Section -->
     <section style="padding:8rem 0;background:linear-gradient(180deg,rgba(16,155,170,0.05) 0%,transparent 100%);position:relative;overflow:hidden;">
