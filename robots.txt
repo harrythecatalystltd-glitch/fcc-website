@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Block admin/utility pages from indexing
+Disallow: /thank-you
+Disallow: /free-suitability-quiz
+
+# AI/LLM crawlers — allow for brand visibility in AI search
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
+Sitemap: https://fitnesscoachchronicle.com/sitemap.xml
