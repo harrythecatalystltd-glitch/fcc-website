@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 0c. Scroll animations for non-GSAP pages
+    // 0c. Scroll animations — GSAP if available, IntersectionObserver fallback otherwise
     if (typeof gsap === 'undefined') {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(e => {
@@ -38,69 +38,68 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-        return; // Skip GSAP-dependent code below
-    }
+    } else {
+        // 1. Initial Hero Animations with robust staggering
+        const heroElements = document.querySelectorAll(".hero .fade-up");
 
-    // 1. Initial Hero Animations with robust staggering
-    const heroElements = document.querySelectorAll(".hero .fade-up");
-    
-    gsap.to(heroElements, {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.15,
-        ease: "power3.out",
-        delay: 0.1
-    });
-
-    // 2. Parallax effect for the hero image
-    gsap.to(".hero-img", {
-        y: 60,
-        scale: 1.1,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".hero",
-            start: "top top",
-            end: "bottom top",
-            scrub: 1
-        }
-    });
-
-    // 3. Ambient Background slow movement
-    gsap.to(".glow-1", {
-        x: 100,
-        y: 50,
-        duration: 20,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut"
-    });
-    
-    gsap.to(".glow-2", {
-        x: -100,
-        y: -50,
-        duration: 15,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut"
-    });
-
-    // 4. ScrollTrigger fading for upcoming sections
-    const scrollElements = document.querySelectorAll("section:not(.hero) .fade-up, .partners.fade-up");
-    
-    scrollElements.forEach((el) => {
-        gsap.to(el, {
-            scrollTrigger: {
-                trigger: el,
-                start: "top 85%",
-            },
+        gsap.to(heroElements, {
             y: 0,
             opacity: 1,
-            duration: 0.8,
-            ease: "power2.out"
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power3.out",
+            delay: 0.1
         });
-    });
-    
+
+        // 2. Parallax effect for the hero image
+        gsap.to(".hero-img", {
+            y: 60,
+            scale: 1.1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".hero",
+                start: "top top",
+                end: "bottom top",
+                scrub: 1
+            }
+        });
+
+        // 3. Ambient Background slow movement
+        gsap.to(".glow-1", {
+            x: 100,
+            y: 50,
+            duration: 20,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        gsap.to(".glow-2", {
+            x: -100,
+            y: -50,
+            duration: 15,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        // 4. ScrollTrigger fading for upcoming sections
+        const scrollElements = document.querySelectorAll("section:not(.hero) .fade-up, .partners.fade-up");
+
+        scrollElements.forEach((el) => {
+            gsap.to(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                },
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: "power2.out"
+            });
+        });
+    }
+
     // 5. Card Hover Tilt Effects (Glassmorphism pop)
     const cards = document.querySelectorAll('.glass-card');
     
