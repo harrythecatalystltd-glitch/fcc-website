@@ -98,7 +98,7 @@
         </nav>
         <div class="badge fade-up"><i class="ph-fill ph-certificate"></i> Free &bull; 60 Seconds &bull; No Obligation</div>
         <h1 class="fade-up">Free Personal Trainer Course Suitability Quiz: Find the Right PT Course in Edinburgh</h1>
-        <p class="fade-up" style="font-size:1.1rem; color:var(--text-body); max-width:640px; margin:1rem auto 0; line-height:1.8;">Answer 3 quick questions and we'll match you to the right FCC Level 3 PT course for your goals, timeline, and lifestyle and instantly send your free Level 3 Price Guide with full 0% finance breakdowns.</p>
+        <p class="fade-up" style="font-size:1.1rem; color:var(--text-body); max-width:640px; margin:1rem auto 0; line-height:1.8;">Answer 4 quick questions and we'll match you to the right FCC Level 3 PT course for your goals, timeline, and lifestyle — and instantly send your free Level 3 Price Guide with full 0% finance breakdowns.</p>
       </div>
     </section>
 
@@ -150,14 +150,23 @@
           <div class="quiz-step" id="step-3">
             <h3>3. How much time can you commit to studying per week?</h3>
             <div class="quiz-options">
-              <button class="quiz-btn" data-next="step-4">Under 5 hours</button>
-              <button class="quiz-btn" data-next="step-4">5 - 10 hours</button>
-              <button class="quiz-btn" data-next="step-4">10+ hours (I want to fast-track)</button>
+              <button class="quiz-btn" data-next="step-4" data-answer="study-low">Under 5 hours</button>
+              <button class="quiz-btn" data-next="step-4" data-answer="study-mid">5 - 10 hours</button>
+              <button class="quiz-btn" data-next="step-4" data-answer="study-high">10+ hours (I want to fast-track)</button>
             </div>
           </div>
 
-          <!-- Step 4: Lead Capture -->
+          <!-- Step 4: Edinburgh Attendance -->
           <div class="quiz-step" id="step-4">
+            <h3>4. Can you travel to our Edinburgh gym for practical sessions?</h3>
+            <div class="quiz-options">
+              <button class="quiz-btn" data-next="step-5" data-answer="edinburgh-yes">Yes — I'm Edinburgh-based or can travel in</button>
+              <button class="quiz-btn" data-next="step-5" data-answer="edinburgh-no">No — I need a fully remote option</button>
+            </div>
+          </div>
+
+          <!-- Step 5: Lead Capture -->
+          <div class="quiz-step" id="step-5">
             <div class="form-header text-center">
               <i class="ph-fill ph-check-circle quiz-success-icon"></i>
               <h3>Your Score is Ready!</h3>
@@ -183,14 +192,18 @@
             </form>
           </div>
 
-          <!-- Step 5: Results Screen -->
-          <div class="quiz-step" id="step-5">
+          <!-- Step 6: Results Screen -->
+          <div class="quiz-step" id="step-6">
             <div class="form-header text-center result-screen">
-              <div class="score-circle">Premium Fit</div>
+              <div class="score-circle" id="quiz-score-label">Great Fit</div>
               <h3>You are highly suited for a PT Career!</h3>
-              <p>Based on your answers, you have the mindset and commitment required to succeed in the fitness industry.</p>
-              <p><em>Check your email. We've sent your full Career Snapshot and Price Guide.</em></p>
-              <a href="/thank-you" class="btn btn-primary mt-2" style="margin-top:1.5rem;">See What Happens Next <i class="ph-bold ph-arrow-right"></i></a>
+              <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(30,230,253,0.2); border-radius:12px; padding:1.25rem 1.5rem; margin:1rem 0; text-align:left;">
+                <p style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--secondary); margin:0 0 0.4rem;">Your recommended course</p>
+                <strong id="quiz-course-name" style="font-size:1.1rem; display:block; margin-bottom:0.5rem;"></strong>
+                <p id="quiz-course-desc" style="font-size:0.9rem; color:var(--text-body); margin:0;"></p>
+              </div>
+              <p><em>Check your email — we've sent your full Career Snapshot and Price Guide.</em></p>
+              <a id="quiz-course-link" href="/level-3-pt-course-edinburgh/" class="btn btn-primary mt-2" style="margin-top:1.5rem;">View My Course <i class="ph-bold ph-arrow-right"></i></a>
             </div>
           </div>
 

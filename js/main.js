@@ -140,21 +140,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const quizBtns = document.querySelectorAll('.quiz-btn');
     const progressBar = document.getElementById('quiz-progress-bar');
     let currentStep = 1;
+    const quizAnswers = {};
 
     quizBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             const currentStepEl = e.target.closest('.quiz-step');
             const nextStepId = e.target.getAttribute('data-next');
-            
+            const answer = e.target.getAttribute('data-answer');
+
+            // Store answer keyed by step ID
+            if (answer) quizAnswers[currentStepEl.id] = answer;
+
             // Hide current step
             currentStepEl.classList.remove('active');
-            
+
             // Show next step
             document.getElementById(nextStepId).classList.add('active');
-            
+
             // Update Progress Bar
             currentStep++;
-            const totalSteps = 4; // Up to Lead Capture (Step 4)
+            const totalSteps = 5; // Up to Lead Capture (Step 5)
             const progress = (currentStep / totalSteps) * 100;
             if(progressBar) {
                 progressBar.style.width = `${progress}%`;
@@ -162,20 +167,52 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Handle final Form Submit (Demo mode to show result screen)
+    // Handle final Form Submit — compute course recommendation and show results
     const quizForm = document.getElementById('quiz-lead-form');
     if(quizForm) {
         quizForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevent page refresh for demo
+            e.preventDefault();
 
-            document.getElementById('step-4').classList.remove('active');
-            document.getElementById('step-5').classList.add('active');
-            if(progressBar) {
-                progressBar.style.width = '100%';
-                progressBar.style.backgroundColor = '#1ee6fd'; // Cyan success
+            // Determine recommendation from stored answers
+            const studyTime = quizAnswers['step-3'] || '';
+            const edinburgh = quizAnswers['step-4'] || '';
+
+            let scoreLabel, courseName, courseDesc, courseUrl;
+
+            if (edinburgh === 'edinburgh-no') {
+                scoreLabel  = 'Flexible Fit';
+                courseName  = 'Online Personal Trainer Course';
+                courseDesc  = 'Study fully at your own pace, from anywhere in the UK. Complete Level 2 & 3 qualification, CIMSPA-endorsed, 0% finance available. Practical assessment completed remotely.';
+                courseUrl   = '/online-personal-trainer-course-edinburgh/';
+            } else if (studyTime === 'study-high') {
+                scoreLabel  = 'Fast-Track Ready';
+                courseName  = 'Fast-Track Personal Trainer Course';
+                courseDesc  = 'Our most intensive qualification route. Designed for those ready to commit and qualify quickly. Practical days at Platform Health & Fitness, Edinburgh. CIMSPA-endorsed, 0% finance available.';
+                courseUrl   = '/fast-track-personal-trainer-course-edinburgh/';
+            } else {
+                scoreLabel  = 'Academy Fit';
+                courseName  = 'Level 3 Hybrid Personal Trainer Course';
+                courseDesc  = 'The flagship FCC programme. Self-paced online theory combined with practical workshop days at our Edinburgh gym. CIMSPA-endorsed, 0% finance available.';
+                courseUrl   = '/level-3-pt-course-edinburgh/';
             }
 
-            // In production, you would fire an AJAX request to Formspree/CRM here
+            // Inject into results screen
+            const scoreLabelEl = document.getElementById('quiz-score-label');
+            const courseNameEl = document.getElementById('quiz-course-name');
+            const courseDescEl = document.getElementById('quiz-course-desc');
+            const courseLinkEl = document.getElementById('quiz-course-link');
+
+            if (scoreLabelEl) scoreLabelEl.textContent = scoreLabel;
+            if (courseNameEl) courseNameEl.textContent = courseName;
+            if (courseDescEl) courseDescEl.textContent = courseDesc;
+            if (courseLinkEl) courseLinkEl.href = courseUrl;
+
+            document.getElementById('step-5').classList.remove('active');
+            document.getElementById('step-6').classList.add('active');
+            if(progressBar) {
+                progressBar.style.width = '100%';
+                progressBar.style.backgroundColor = '#1ee6fd';
+            }
         });
     }
 
