@@ -67,12 +67,24 @@
           </div>
         </div>
 
-        <div class="glass-card fade-up" style="padding:2.5rem; margin-bottom:2rem; border-color:rgba(30,230,253,0.25);">
-          <h2 style="font-size:1.5rem; margin-bottom:1rem;">While You Wait: Explore the Courses</h2>
-          <p style="color:var(--text-body); margin-bottom:2rem;">Get a head start. Browse the full course details and see exactly what each FCC route covers.</p>
+        <!-- Course recommendation — shown when arriving from quiz (course param in URL) -->
+        <div id="course-rec-card" class="glass-card fade-up" style="padding:2.5rem; margin-bottom:2rem; border-color:rgba(30,230,253,0.35); display:none;">
+          <p style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--secondary); margin:0 0 0.5rem;"><i class="ph-fill ph-star"></i> Based on your quiz answers</p>
+          <h2 id="rec-course-name" style="font-size:1.5rem; margin-bottom:0.75rem;"></h2>
+          <p id="rec-course-desc" style="color:var(--text-body); margin-bottom:2rem;"></p>
+          <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+            <a id="rec-course-link" href="#" class="btn btn-primary">View My Course <i class="ph-bold ph-arrow-right"></i></a>
+            <a href="#book-call" class="btn btn-glow">Book an Advisor Call</a>
+          </div>
+        </div>
+
+        <!-- Fallback card — shown when no quiz param (direct visit) -->
+        <div id="course-fallback-card" class="glass-card fade-up" style="padding:2.5rem; margin-bottom:2rem; border-color:rgba(30,230,253,0.25);">
+          <h2 style="font-size:1.5rem; margin-bottom:1rem;">Explore the Courses</h2>
+          <p style="color:var(--text-body); margin-bottom:2rem;">Browse the full course details and see exactly what each FCC route covers.</p>
           <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
             <a href="/level-3-pt-course-edinburgh/" class="btn btn-primary">View Level 3 Course <i class="ph-bold ph-arrow-right"></i></a>
-            <a href="/contact" class="btn btn-glow">Book an Advisor Call</a>
+            <a href="#book-call" class="btn btn-glow">Book an Advisor Call</a>
           </div>
         </div>
 
@@ -92,7 +104,7 @@
     </section>
 
     <!-- Booking Calendar -->
-    <section style="padding:5rem 0;">
+    <section id="book-call" style="padding:5rem 0;">
       <div class="container" style="max-width:900px;text-align:center;">
         <h2 style="color:#f8fafc;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:0.75rem;">Book a Call With an Advisor</h2>
         <p style="color:#94a3b8;margin-bottom:2.5rem;">Pick a time that suits you. No pressure, just a quick chat about your options.</p>
@@ -112,5 +124,37 @@
   </footer>
 
   <script src="/js/main.js"></script>
+  <script>
+    (function () {
+      const courses = {
+        online: {
+          name: 'Online Personal Trainer Course',
+          desc: 'Study fully at your own pace, from anywhere in the UK. Full Level 2 & 3 qualification, CIMSPA-endorsed, 0% finance available. Practical assessment completed remotely.',
+          url: '/online-personal-trainer-course-edinburgh/'
+        },
+        'fast-track': {
+          name: 'Fast-Track Personal Trainer Course',
+          desc: 'Our most intensive qualification route — designed for those ready to commit and qualify quickly. Practical days at Platform Health & Fitness, Edinburgh. CIMSPA-endorsed, 0% finance available.',
+          url: '/fast-track-personal-trainer-course-edinburgh/'
+        },
+        hybrid: {
+          name: 'Level 3 Hybrid Personal Trainer Course',
+          desc: 'The flagship FCC programme. Self-paced online theory combined with practical workshop days at our Edinburgh gym. CIMSPA-endorsed, 0% finance available.',
+          url: '/level-3-pt-course-edinburgh/'
+        }
+      };
+
+      const param = new URLSearchParams(window.location.search).get('course');
+      const rec = courses[param];
+
+      if (rec) {
+        document.getElementById('rec-course-name').textContent = rec.name;
+        document.getElementById('rec-course-desc').textContent = rec.desc;
+        document.getElementById('rec-course-link').href = rec.url;
+        document.getElementById('course-rec-card').style.display = 'block';
+        document.getElementById('course-fallback-card').style.display = 'none';
+      }
+    })();
+  </script>
 </body>
 </html>

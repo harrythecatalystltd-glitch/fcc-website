@@ -167,52 +167,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Handle final Form Submit — compute course recommendation and show results
+    // Handle final Form Submit — determine recommendation and redirect to thank-you page
     const quizForm = document.getElementById('quiz-lead-form');
     if(quizForm) {
         quizForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Determine recommendation from stored answers
             const studyTime = quizAnswers['step-3'] || '';
             const edinburgh = quizAnswers['step-4'] || '';
 
-            let scoreLabel, courseName, courseDesc, courseUrl;
-
+            let course;
             if (edinburgh === 'edinburgh-no') {
-                scoreLabel  = 'Flexible Fit';
-                courseName  = 'Online Personal Trainer Course';
-                courseDesc  = 'Study fully at your own pace, from anywhere in the UK. Complete Level 2 & 3 qualification, CIMSPA-endorsed, 0% finance available. Practical assessment completed remotely.';
-                courseUrl   = '/online-personal-trainer-course-edinburgh/';
+                course = 'online';
             } else if (studyTime === 'study-high') {
-                scoreLabel  = 'Fast-Track Ready';
-                courseName  = 'Fast-Track Personal Trainer Course';
-                courseDesc  = 'Our most intensive qualification route. Designed for those ready to commit and qualify quickly. Practical days at Platform Health & Fitness, Edinburgh. CIMSPA-endorsed, 0% finance available.';
-                courseUrl   = '/fast-track-personal-trainer-course-edinburgh/';
+                course = 'fast-track';
             } else {
-                scoreLabel  = 'Academy Fit';
-                courseName  = 'Level 3 Hybrid Personal Trainer Course';
-                courseDesc  = 'The flagship FCC programme. Self-paced online theory combined with practical workshop days at our Edinburgh gym. CIMSPA-endorsed, 0% finance available.';
-                courseUrl   = '/level-3-pt-course-edinburgh/';
+                course = 'hybrid';
             }
 
-            // Inject into results screen
-            const scoreLabelEl = document.getElementById('quiz-score-label');
-            const courseNameEl = document.getElementById('quiz-course-name');
-            const courseDescEl = document.getElementById('quiz-course-desc');
-            const courseLinkEl = document.getElementById('quiz-course-link');
-
-            if (scoreLabelEl) scoreLabelEl.textContent = scoreLabel;
-            if (courseNameEl) courseNameEl.textContent = courseName;
-            if (courseDescEl) courseDescEl.textContent = courseDesc;
-            if (courseLinkEl) courseLinkEl.href = courseUrl;
-
-            document.getElementById('step-5').classList.remove('active');
-            document.getElementById('step-6').classList.add('active');
-            if(progressBar) {
-                progressBar.style.width = '100%';
-                progressBar.style.backgroundColor = '#1ee6fd';
-            }
+            window.location.href = '/thank-you?course=' + course;
         });
     }
 
