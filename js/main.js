@@ -95,7 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 y: 0,
                 opacity: 1,
                 duration: 0.8,
-                ease: "power2.out"
+                ease: "power2.out",
+                delay: parseFloat(el.dataset.delay) || 0
             });
         });
     }
