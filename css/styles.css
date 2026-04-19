@@ -513,14 +513,14 @@ a {
 
 /* Testimonials grid */
 .testimonials-section {
-    padding: 8rem 0;
+    padding: 4.5rem 0;
     background: linear-gradient(180deg, transparent 0%, rgba(16, 155, 170, 0.06) 100%);
 }
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 4rem;
+    gap: 1.25rem;
+    margin-top: 2rem;
 }
 .tcard {
     padding: 2.4rem;
@@ -1054,7 +1054,7 @@ a {
         grid-template-columns: 1fr;
     }
     .testimonials-section {
-        padding: 4rem 0;
+        padding: 3rem 0;
     }
 
     /* Testimonial (legacy single) */
