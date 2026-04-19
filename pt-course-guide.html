@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Complete PT Course Guide | The Fitness Coach Chronicle</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <style>
+    :root {
+      --primary: #109baa;
+      --secondary: #1ee6fd;
+      --dark: #0a0c10;
+      --surface: rgba(255,255,255,0.03);
+      --surface-border: rgba(255,255,255,0.08);
+      --surface-hover: rgba(255,255,255,0.06);
+      --white: #ffffff;
+      --text-body: #94a3b8;
+      --text-heading: #f8fafc;
+      --font-heading: 'Archivo', sans-serif;
+      --font-body: 'Karla', sans-serif;
+      --gold: #f5c842;
+      --green: #22c55e;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--dark);
+      color: var(--text-body);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── Ambient glows ── */
+    .ambient-glow { position: fixed; border-radius: 50%; filter: blur(140px); z-index: 0; pointer-events: none; }
+    .glow-1 { width: 700px; height: 700px; background: radial-gradient(circle, var(--primary) 0%, transparent 70%); top: -250px; left: -200px; opacity: 0.35; }
+    .glow-2 { width: 600px; height: 600px; background: radial-gradient(circle, var(--secondary) 0%, transparent 70%); bottom: 0; right: -150px; opacity: 0.15; }
+    .glow-3 { width: 500px; height: 500px; background: radial-gradient(circle, #7c3aed 0%, transparent 70%); top: 60%; left: 40%; opacity: 0.1; }
+
+    /* ── Nav ── */
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(10,12,16,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--surface-border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 36px; }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+    .nav-cta a { font-family: var(--font-heading); font-size: .85rem; font-weight: 700; padding: .55rem 1.25rem; border-radius: 8px; transition: all .2s; }
+    .btn-ghost { color: var(--secondary); border: 1px solid rgba(30,230,253,0.3); }
+    .btn-ghost:hover { background: rgba(30,230,253,0.08); }
+    .btn-cta { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #0a0c10; font-weight: 800; }
+    .btn-cta:hover { opacity: .9; transform: translateY(-1px); }
+    text-decoration: none;
+
+    /* ── Containers ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
+    .container-narrow { max-width: 820px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
+
+    /* ── Section spacing ── */
+    section { padding: 4.5rem 0; position: relative; }
+    section.tight { padding: 3rem 0; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-family: var(--font-body); font-size: .78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 2.5px; color: var(--secondary);
+      margin-bottom: 1.25rem;
+    }
+    .section-label i { font-size: 1rem; }
+
+    /* ── Typography ── */
+    h1 { font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 900; color: var(--text-heading); line-height: 1.05; }
+    h2 { font-family: var(--font-heading); font-size: clamp(1.9rem, 3.5vw, 2.9rem); font-weight: 800; color: var(--text-heading); line-height: 1.1; }
+    h3 { font-family: var(--font-heading); font-size: clamp(1.25rem, 2vw, 1.65rem); font-weight: 800; color: var(--text-heading); line-height: 1.2; }
+    h4 { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--text-heading); }
+    p { font-size: 1.05rem; line-height: 1.75; }
+    .lead { font-size: 1.2rem; color: #b0bec5; line-height: 1.8; }
+    .gradient-text { background: linear-gradient(135deg, var(--secondary), var(--primary), #ffffff); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shine 6s linear infinite; }
+    @keyframes shine { to { background-position: 200% center; } }
+
+    /* ── Glass card ── */
+    .glass { background: var(--surface); border: 1px solid var(--surface-border); border-radius: 20px; backdrop-filter: blur(16px); }
+    .glass-elevated { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; }
+
+    /* ── Buttons ── */
+    .btn { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--font-heading); font-weight: 800; font-size: 1rem; padding: .9rem 2rem; border-radius: 10px; cursor: pointer; text-decoration: none; transition: all .2s; border: none; }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #0a0c10; }
+    .btn-primary:hover { opacity: .9; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(30,230,253,0.25); }
+    .btn-outline { background: transparent; border: 2px solid rgba(30,230,253,0.4); color: var(--secondary); }
+    .btn-outline:hover { background: rgba(30,230,253,0.08); border-color: var(--secondary); }
+    .btn-large { padding: 1.1rem 2.5rem; font-size: 1.1rem; }
+    .btn-sm { padding: .6rem 1.4rem; font-size: .9rem; }
+
+    /* ── Hero ── */
+    .hero { padding: 3.5rem 0 3rem; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(30,230,253,0.08); border: 1px solid rgba(30,230,253,0.25);
+      border-radius: 100px; padding: .4rem 1rem; font-size: .82rem; font-weight: 600;
+      color: var(--secondary); margin-bottom: 1.75rem; letter-spacing: .5px;
+    }
+    .hero h1 { margin-bottom: 1.5rem; }
+    .hero .lead { margin-bottom: 2.5rem; max-width: 680px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
+    .hero-proof { display: flex; flex-wrap: wrap; gap: 2rem; }
+    .proof-item { display: flex; align-items: center; gap: .6rem; font-size: .9rem; }
+    .proof-item i { color: var(--secondary); font-size: 1.1rem; }
+    .proof-item strong { color: var(--text-heading); }
+    .divider { border: none; border-top: 1px solid var(--surface-border); margin: 0; }
+
+    /* ── Earnings section ── */
+    .earnings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+    .earning-card { padding: 2rem; border-radius: 20px; }
+    .earning-card .amount { font-family: var(--font-heading); font-size: 2.6rem; font-weight: 900; line-height: 1; margin-bottom: .5rem; }
+    .earning-card .type { font-size: .85rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: .75rem; }
+    .earning-card p { font-size: .95rem; }
+    .card-teal { background: linear-gradient(135deg, rgba(16,155,170,0.15), rgba(30,230,253,0.05)); border: 1px solid rgba(30,230,253,0.2); }
+    .card-amber { background: linear-gradient(135deg, rgba(245,200,66,0.12), rgba(245,200,66,0.03)); border: 1px solid rgba(245,200,66,0.25); }
+    .card-gold { background: linear-gradient(135deg, rgba(245,200,66,0.12), rgba(245,200,66,0.03)); border: 1px solid rgba(245,200,66,0.25); }
+    .card-green { background: linear-gradient(135deg, rgba(34,197,94,0.12), rgba(34,197,94,0.03)); border: 1px solid rgba(34,197,94,0.25); }
+
+    /* ── Why FCC ── */
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+    .why-item { padding: 1.75rem; border-radius: 16px; background: var(--surface); border: 1px solid var(--surface-border); }
+    .why-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(30,230,253,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .why-icon i { font-size: 1.4rem; color: var(--secondary); }
+
+    /* ── Support summary ── */
+    .support-pills { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; justify-content: center; }
+    .support-pill { display: flex; align-items: center; gap: .75rem; background: var(--surface); border: 1px solid var(--surface-border); border-radius: 100px; padding: .75rem 1.5rem; }
+    .support-pill i { color: var(--secondary); font-size: 1.25rem; }
+    .support-pill strong { font-family: var(--font-heading); font-size: 1rem; color: var(--text-heading); }
+    .support-pill span { font-size: .85rem; color: var(--text-body); }
+
+    /* ── Journey timeline ── */
+    .timeline { position: relative; margin-top: 2.5rem; }
+    .timeline::before { content: ''; position: absolute; left: 22px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--primary), var(--secondary), transparent); opacity: 0.4; }
+    .timeline-item { display: flex; gap: 1.75rem; margin-bottom: 2.5rem; position: relative; }
+    .timeline-badge { min-width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: .85rem; font-weight: 900; color: #0a0c10; z-index: 1; flex-shrink: 0; }
+    .timeline-badge.workshop { background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+    .timeline-content { background: var(--surface); border: 1px solid var(--surface-border); border-radius: 16px; padding: 1.5rem; flex: 1; }
+    .timeline-label { font-size: .75rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: .4rem; color: var(--secondary); }
+    .timeline-label.workshop { color: var(--text-heading); font-weight: 800; }
+    .timeline-content ul { list-style: none; margin-top: .75rem; }
+    .timeline-content ul li { font-size: .95rem; padding: .3rem 0; display: flex; align-items: flex-start; gap: .5rem; }
+    .timeline-content ul li::before { content: '›'; color: var(--secondary); font-weight: 700; margin-top: 1px; flex-shrink: 0; }
+
+    /* ── Pricing grid ── */
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+    .pricing-card { border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; transition: transform .2s; }
+    .pricing-card:hover { transform: translateY(-4px); }
+    .pricing-card.featured { background: linear-gradient(160deg, rgba(16,155,170,0.18), rgba(30,230,253,0.06)); border: 1px solid rgba(30,230,253,0.3); position: relative; }
+    .pricing-card.standard { background: var(--surface); border: 1px solid var(--surface-border); }
+    .pricing-card.premium { background: linear-gradient(160deg, rgba(16,155,170,0.14), rgba(30,230,253,0.04)); border: 1px solid rgba(30,230,253,0.22); }
+    .featured-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #0a0c10; font-family: var(--font-heading); font-size: .72rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: .3rem 1rem; border-radius: 100px; white-space: nowrap; }
+    .pricing-type { font-size: .75rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; color: var(--secondary); margin-bottom: .5rem; }
+.pricing-name { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 900; color: var(--text-heading); margin-bottom: .25rem; }
+    .pricing-mode { font-size: .85rem; color: var(--text-body); margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--surface-border); }
+    .pricing-price { font-family: var(--font-heading); font-size: 2.4rem; font-weight: 900; color: var(--text-heading); line-height: 1; margin-bottom: .4rem; }
+    .pricing-price span { font-size: 1rem; font-weight: 600; color: var(--text-body); }
+    .pricing-finance { font-size: .85rem; color: var(--secondary); margin-bottom: 1.5rem; }
+    .pricing-features { list-style: none; flex: 1; margin-bottom: 1.75rem; }
+    .pricing-features li { display: flex; align-items: flex-start; gap: .6rem; padding: .45rem 0; font-size: .92rem; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .pricing-features li:last-child { border-bottom: none; }
+    .pricing-features li i { color: var(--green); font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+    .pricing-features li i.no { color: #475569; }
+    .pricing-cta { width: 100%; display: block; text-align: center; }
+
+    /* ── Competitor comparison ── */
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 2.5rem; font-size: .92rem; }
+    .compare-table th { font-family: var(--font-heading); font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: .75rem 1rem; text-align: left; border-bottom: 1px solid var(--surface-border); }
+    .compare-table th.fcc { color: var(--secondary); }
+    .compare-table td { padding: .85rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: top; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .feature-col { color: var(--text-heading); font-weight: 600; width: 28%; }
+    .compare-table .fcc-col { color: var(--text-body); background: rgba(30,230,253,0.03); }
+    .compare-table i.check { color: var(--green); font-size: 1rem; }
+    .compare-table i.cross { color: #475569; font-size: 1rem; }
+    .compare-table i.partial { color: var(--gold); font-size: 1rem; }
+.compare-table-wrap { background: var(--surface); border: 1px solid var(--surface-border); border-radius: 20px; overflow: hidden; overflow-x: auto; }
+    .compare-table-wrap table { min-width: 680px; }
+
+    /* ── Testimonial ── */
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+    .testimonial-card { background: var(--surface); border: 1px solid var(--surface-border); border-radius: 16px; padding: 1.75rem; }
+    .stars { display: flex; gap: 3px; margin-bottom: 1rem; }
+    .stars i { color: var(--gold); font-size: .95rem; }
+    .testimonial-text { font-size: .95rem; line-height: 1.7; margin-bottom: 1.25rem; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: .75rem; }
+    .author-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 800; font-size: .85rem; color: #0a0c10; }
+    .author-name { font-weight: 700; color: var(--text-heading); font-size: .9rem; }
+    .author-detail { font-size: .8rem; color: var(--text-body); }
+
+    /* ── FAQ ── */
+    .faq-list { margin-top: 2rem; }
+    .faq-item { border-bottom: 1px solid var(--surface-border); }
+    .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 0; cursor: pointer; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: var(--text-heading); gap: 1rem; }
+    .faq-question i { color: var(--secondary); font-size: 1.3rem; flex-shrink: 0; transition: transform .2s; }
+    .faq-question.open i { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; }
+    .faq-answer.open { max-height: 400px; padding-bottom: 1.25rem; }
+    .faq-answer p { font-size: .97rem; }
+
+    /* ── CTA band ── */
+    .cta-band { background: linear-gradient(135deg, rgba(16,155,170,0.2), rgba(30,230,253,0.08)); border-top: 1px solid rgba(30,230,253,0.15); border-bottom: 1px solid rgba(30,230,253,0.15); padding: 4rem 0; text-align: center; }
+    .cta-band h2 { margin-bottom: 1rem; }
+    .cta-band .lead { margin: 0 auto 2.5rem; max-width: 600px; }
+    .cta-band .btn-group { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+
+    /* ── Footer ── */
+    .footer { padding: 3rem 0; border-top: 1px solid var(--surface-border); }
+    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem; }
+    .footer-logo img { height: 32px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-links a { font-size: .88rem; color: var(--text-body); transition: color .2s; }
+    .footer-links a:hover { color: var(--secondary); }
+    .footer-copy { font-size: .82rem; color: #475569; }
+
+    /* ── Highlight box ── */
+    .highlight-box { background: rgba(30,230,253,0.06); border: 1px solid rgba(30,230,253,0.2); border-left: 3px solid var(--secondary); border-radius: 12px; padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .highlight-box p { font-size: 1rem; }
+    .highlight-box strong { color: var(--text-heading); }
+
+    /* ── Inline CTA strip ── */
+    .inline-cta { background: linear-gradient(135deg, rgba(16,155,170,0.12), rgba(30,230,253,0.06)); border: 1px solid rgba(30,230,253,0.2); border-radius: 16px; padding: 1.75rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem; margin: 2rem 0; }
+    .inline-cta h3 { margin-bottom: .4rem; }
+    .inline-cta p { font-size: .95rem; max-width: 460px; }
+
+    /* ── Dark section ── */
+    .section-dark { background: rgba(0,0,0,0.35); }
+
+    /* ── Stat row ── */
+    .stat-row { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2rem; }
+    .stat-item { text-align: center; }
+    .stat-number { font-family: var(--font-heading); font-size: 2.8rem; font-weight: 900; line-height: 1; }
+    .stat-label { font-size: .82rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-top: .35rem; }
+
+    /* ── Workshop blocks ── */
+    .workshop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; margin-top: 2.5rem; }
+    .workshop-card { padding: 1.75rem; border-radius: 16px; }
+    .workshop-card.l2 { background: rgba(16,155,170,0.08); border: 1px solid rgba(16,155,170,0.25); }
+    .workshop-card.l3 { background: rgba(16,155,170,0.06); border: 1px solid rgba(16,155,170,0.2); }
+    .workshop-number { font-family: var(--font-heading); font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: .5rem; }
+    .workshop-number.l2-label { color: var(--secondary); }
+    .workshop-number.l3-label { color: var(--secondary); }
+    .workshop-card ul { list-style: none; margin-top: .75rem; }
+    .workshop-card ul li { font-size: .9rem; padding: .3rem 0; display: flex; gap: .5rem; align-items: flex-start; }
+    .workshop-card ul li::before { content: '›'; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .workshop-card.l2 ul li::before { color: var(--secondary); }
+    .workshop-card.l3 ul li::before { color: var(--secondary); }
+    .prereq { font-size: .8rem; font-style: italic; margin-top: .75rem; opacity: .7; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      section { padding: 3rem 0; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .inline-cta { flex-direction: column; text-align: center; }
+      .inline-cta .btn { width: 100%; justify-content: center; }
+      .compare-table th, .compare-table td { padding: .65rem .75rem; }
+      .stat-number { font-size: 2.2rem; }
+      .hero-cta { flex-direction: column; }
+      .hero-cta .btn { width: 100%; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .nav-inner { flex-wrap: wrap; gap: .75rem; }
+      .timeline::before { display: none; }
+      .container, .container-narrow { padding: 0 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="https://fitnesscoachchronicle.com">
+        <img src="https://fitnesscoachchronicle.com/wp-content/uploads/2025/05/AI_FILE.ai-removebg-preview.png" alt="The Fitness Coach Chronicle">
+      </a>
+      <div class="nav-cta">
+        <a href="https://fitnesscoachchronicle.com" class="btn-ghost btn-sm btn" style="text-decoration:none;">Visit Website</a>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/jamie-henderson-personal-calendar-f-eksbfz2" target="_blank" rel="noopener" class="btn-cta btn-sm btn" style="text-decoration:none;"><i class="ph-bold ph-calendar-blank"></i> Book a Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="container-narrow">
+      <div class="hero-badge"><i class="ph-fill ph-certificate"></i> CIMSPA Endorsed &bull; OFQUAL Regulated &bull; 100% Pass Rate</div>
+      <h1>You're one decision away from a career you actually love.</h1>
+      <p class="lead" style="margin-top:1.25rem;">
+        You've taken the quiz. That means something clicked. This guide is your honest, complete walkthrough of what becoming a qualified Personal Trainer with The FCC looks like: what you'll learn, what support you'll get, what you can earn, and exactly how to get started.
+      </p>
+      <div class="hero-cta">
+        <a href="https://api.leadconnectorhq.com/widget/bookings/jamie-henderson-personal-calendar-f-eksbfz2" target="_blank" rel="noopener" class="btn btn-primary btn-large"><i class="ph-bold ph-calendar-blank"></i> Book Your Free Discovery Call</a>
+        <a href="https://fitnesscoachchronicle.com" class="btn btn-outline">Explore the Website <i class="ph-bold ph-arrow-right"></i></a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item"><i class="ph-fill ph-star"></i><span><strong>100% pass rate</strong>, every single student</span></div>
+        <div class="proof-item"><i class="ph-fill ph-percent"></i><span><strong>0% finance</strong> available</span></div>
+        <div class="proof-item"><i class="ph-fill ph-clock"></i><span><strong>Flexible</strong>, fits around your life</span></div>
+        <div class="proof-item"><i class="ph-fill ph-users"></i><span><strong>1-to-1 tutor</strong> support throughout</span></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══ THE OPPORTUNITY ══ -->
+  <section>
+    <div class="container">
+      <div class="section-label"><i class="ph-fill ph-trend-up"></i> The Career Opportunity</div>
+      <h2>What can you actually earn as a PT?</h2>
+      <p class="lead" style="max-width:700px; margin-top:.75rem;">
+        The fitness industry is one of the fastest-growing career paths in the UK. Once you're qualified, your earning potential is almost entirely in your own hands.
+      </p>
+
+      <div class="earnings-grid">
+        <div class="earning-card card-teal">
+          <div class="type" style="color:var(--secondary);">In-Person PT</div>
+          <div class="amount gradient-text">£35–£70</div>
+          <p style="color:var(--text-body); font-size:.9rem; margin-bottom:.5rem;">per session (Edinburgh)</p>
+          <p>Delivering face-to-face PT sessions in a commercial gym or your own facility. Build a loyal client base and charge premium rates as you grow your reputation.</p>
+        </div>
+        <div class="earning-card card-amber">
+          <div class="type" style="color:var(--gold);">Online PT</div>
+          <div class="amount" style="color:var(--gold); font-family:var(--font-heading); font-size:2.6rem; font-weight:900; line-height:1; margin-bottom:.5rem;">£40–£150</div>
+          <p style="color:var(--text-body); font-size:.9rem; margin-bottom:.5rem;">per client / month (packages)</p>
+          <p>Coach clients remotely through programming, check-ins, and video calls. Scale beyond the gym floor. Your income is not capped by hours in a day.</p>
+        </div>
+        <div class="earning-card card-gold">
+          <div class="type" style="color:var(--gold);">Established PT</div>
+          <div class="amount" style="color:var(--gold); font-family:var(--font-heading); font-size:2.6rem; font-weight:900; line-height:1; margin-bottom:.5rem;">£40k–£80k</div>
+          <p style="color:var(--text-body); font-size:.9rem; margin-bottom:.5rem;">per year (self-employed)</p>
+          <p>With a full client book, group classes, or online clients added to your in-person work. This is entirely achievable within 2 to 3 years of qualifying.</p>
+        </div>
+        <div class="earning-card card-green">
+          <div class="type" style="color:var(--green);">Online Scaling</div>
+          <div class="amount" style="color:var(--green); font-family:var(--font-heading); font-size:2.6rem; font-weight:900; line-height:1; margin-bottom:.5rem;">£100k+</div>
+          <p style="color:var(--text-body); font-size:.9rem; margin-bottom:.5rem;">per year (scaled model)</p>
+          <p>Top PTs who combine in-person delivery with digital products, group programmes, and online coaching regularly break six figures. Your qualification is the foundation.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box" style="margin-top:2.5rem;">
+        <p><strong>The average starting gym floor instructor earns £22,000 to £28,000.</strong> But the PTs who invest in their own skills, build a client base, and work with a business mentor? They consistently hit £40k to £60k within three years. The qualification opens the door. The FCC helps you walk through it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Inline CTA 1 ── -->
+  <div class="container">
+    <div class="inline-cta">
+      <div>
+        <h3>Ready to talk it through?</h3>
+        <p>Book a free 30-minute discovery call with Jamie. No pressure, no pitch. Just an honest conversation about whether this is right for you.</p>
+      </div>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/jamie-henderson-personal-calendar-f-eksbfz2" target="_blank" rel="noopener" class="btn btn-primary"><i class="ph-bold ph-calendar-blank"></i> Book a Free Call</a>
+    </div>
+  </div>
+
+  <!-- ══ WHY FCC ══ -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-label"><i class="ph-fill ph-shield-check"></i> Why The FCC</div>
+      <h2>This isn't just a course.<br>It's a career blueprint.</h2>
+      <p class="lead" style="max-width:680px; margin-top:.75rem;">
+        Most PT courses hand you a textbook and wish you luck. We built The FCC because the fitness industry deserved something better: a course with real mentorship, a structured journey, and a 100% pass rate to prove it works.
+      </p>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-fill ph-graduation-cap"></i></div>
+          <h4>100% Pass Rate</h4>
+          <p style="font-size:.93rem; margin-top:.5rem;">Every single student who has studied with us has passed. That is the result of structured support and a tutor who genuinely invests in your success.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-fill ph-headset"></i></div>
+          <h4>1-to-1 Tutor Support</h4>
+          <p style="font-size:.93rem; margin-top:.5rem;">You get a dedicated tutor, unlimited WhatsApp messaging, and 6 scheduled support calls. Not a generic ticketing system or a call centre.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-fill ph-calendar-check"></i></div>
+          <h4>Fully Flexible Timeline</h4>
+          <p style="font-size:.93rem; margin-top:.5rem;">No fixed start dates, no pressure. Build your personalised study plan around your work, family, and life. Progress at the pace that works for you.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-fill ph-briefcase"></i></div>
+          <h4>Career-First Approach</h4>
+          <p style="font-size:.93rem; margin-top:.5rem;">From Call 1, we're thinking about where you want to work, who you want to train, and how to build your business. Not just getting you through the exam.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-fill ph-certificate"></i></div>
+          <h4>CIMSPA Endorsed</h4>
+          <p style="font-size:.93rem; margin-top:.5rem;">Your Level 3 Diploma is CIMSPA-endorsed and OFQUAL-regulated: the nationally recognised standard accepted by every gym and employer in the UK.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-fill ph-percent"></i></div>
+          <h4>0% Finance Available</h4>
+          <p style="font-size:.93rem; margin-top:.5rem;">Invest in your career without financial stress. Spread the cost with 0% interest. The course pays for itself once you land your first clients.</p>
+        </div>
+      </div>
+
+      <div class="stat-row" style="margin-top:2.5rem;">
+        <div class="stat-item">
+          <div class="stat-number gradient-text">100%</div>
+          <div class="stat-label" style="color:var(--secondary);">Pass Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number gradient-text">11+</div>
+          <div class="stat-label" style="color:var(--secondary);">Years Gym Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number gradient-text">6</div>
+          <div class="stat-label" style="color:var(--secondary);">Personal Support Calls</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number gradient-text">5</div>
+          <div class="stat-label" style="color:var(--secondary);">In-Person Workshops</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number gradient-text">0%</div>
+          <div class="stat-label" style="color:var(--secondary);">Finance Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SUPPORT INCLUDED ══ -->
+  <section>
+    <div class="container">
+      <div class="section-label"><i class="ph-fill ph-hand-heart"></i> What's Included</div>
+      <h2>Your support structure from day one.</h2>
+      <p class="lead" style="max-width:680px; margin-top:.75rem;">
+        From the moment you enrol, you're not doing this alone. Here's everything that's included with every course. Not just the premium tiers.
+      </p>
+
+      <div class="support-pills">
+        <div class="support-pill">
+          <i class="ph-fill ph-whatsapp-logo"></i>
+          <div>
+            <strong>WhatsApp Support</strong>
+            <span style="display:block;">Unlimited messaging, any time</span>
+          </div>
+        </div>
+        <div class="support-pill">
+          <i class="ph-fill ph-phone-call"></i>
+          <div>
+            <strong>6 × Tutor Calls</strong>
+            <span style="display:block;">30-min personalised sessions</span>
+          </div>
+        </div>
+        <div class="support-pill">
+          <i class="ph-fill ph-chalkboard-teacher"></i>
+          <div>
+            <strong>2 Level 2 Workshops</strong>
+            <span style="display:block;">8 hours each, in-person (Expert &amp; Mastermind)</span>
+          </div>
+        </div>
+        <div class="support-pill">
+          <i class="ph-fill ph-chalkboard-teacher"></i>
+          <div>
+            <strong>3 Level 3 Workshops</strong>
+            <span style="display:block;">8 hours each, in-person (Expert &amp; Mastermind)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ THE JOURNEY ══ -->
+  <section class="section-dark">
+    <div class="container-narrow">
+      <div class="section-label"><i class="ph-fill ph-path"></i> Your Journey</div>
+      <h2>Six support calls. Five workshops. One career.</h2>
+      <p class="lead" style="margin-top:.75rem;">
+        Your journey is fully personalised with no fixed timeline. Here's a complete breakdown of every touchpoint you'll have with your tutor from enrolment to qualification.
+      </p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-badge">C1</div>
+          <div class="timeline-content">
+            <div class="timeline-label">Tutor Call 1</div>
+            <h4>Introduction &amp; Learning Plan</h4>
+            <ul>
+              <li>Course structure overview and module walkthroughs</li>
+              <li>Personalised learning plan based on your weekly study hours</li>
+              <li>Review of your learner questionnaire</li>
+              <li>Confirm payment plan if applicable</li>
+              <li>Open Q&amp;A, your questions answered from the start</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge">W1</div>
+          <div class="timeline-content">
+            <div class="timeline-label workshop">Level 2 Workshop 1, In Person</div>
+            <h4>Gym Instructor Foundations (8 hours)</h4>
+            <ul>
+              <li>UK Physical Activity Guidelines</li>
+              <li>Client consent, health screening and goal setting</li>
+              <li>Introduction to fundamental strength movement patterns</li>
+              <li>Introduction to cardiovascular training and RPE</li>
+            </ul>
+            <p class="prereq">Pre-requisite: Anatomy &amp; Physiology, Professional Practice, Consultation, Lifestyle Management &amp; Risk Stratification modules completed.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge">C2</div>
+          <div class="timeline-content">
+            <div class="timeline-label">Tutor Call 2</div>
+            <h4>Level 2 Module Check-In</h4>
+            <ul>
+              <li>Level 2 module progress review and quiz results discussion</li>
+              <li>Guidance on selecting your practice client</li>
+              <li>Personalised advice based on your progress</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge">C3</div>
+          <div class="timeline-content">
+            <div class="timeline-label">Tutor Call 3</div>
+            <h4>Gym Instructor Assessment Prep</h4>
+            <ul>
+              <li>Full walkthrough of the practical assessment format</li>
+              <li>What to expect, how to prepare, and what you'll be assessed on</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge">W2</div>
+          <div class="timeline-content">
+            <div class="timeline-label workshop">Level 2 Workshop 2, In Person</div>
+            <h4>Gym Instructor Practical Assessment Prep (8 hours)</h4>
+            <ul>
+              <li>Assessment structure walkthrough: warm-up, cardio, dynamic flexibility, fixed &amp; free weights, main CV machine, bodyweight, cool-down, static stretches</li>
+              <li>Full mock attempt and gym floor assessment walkthrough</li>
+            </ul>
+            <p class="prereq">Pre-requisite: Client consultation video assessment completed and passed.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge">C4</div>
+          <div class="timeline-content">
+            <div class="timeline-label">Tutor Call 4</div>
+            <h4>Level 2 Review &amp; Level 3 Intro</h4>
+            <ul>
+              <li>Level 2 reflection and celebration of your progress</li>
+              <li>Introduction to Level 3 PT modules: structure and expectations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge workshop">W3</div>
+          <div class="timeline-content">
+            <div class="timeline-label workshop">Level 3 Workshop 3, In Person</div>
+            <h4>PT: Strength &amp; Cardiovascular Programming (8 hours)</h4>
+            <ul>
+              <li>Movement pattern deep dive: squat, hinge, push, pull, lunge and brace</li>
+              <li>Assessing movement quality and programming at the right level</li>
+              <li>Cardiovascular training programming</li>
+            </ul>
+            <p class="prereq">Pre-requisite: All Level 2 modules and practicals completed and passed.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge">C5</div>
+          <div class="timeline-content">
+            <div class="timeline-label">Tutor Call 5</div>
+            <h4>Level 3 Check-In &amp; PT Assessment Prep</h4>
+            <ul>
+              <li>Level 3 module progress and personalised advice</li>
+              <li>Level 3 practical assessment walkthrough</li>
+              <li>Business and career advice: planning your launch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge workshop">W4</div>
+          <div class="timeline-content">
+            <div class="timeline-label workshop">Level 3 Workshop 4, In Person</div>
+            <h4>PT: Advanced Resistance &amp; Circuits (8 hours)</h4>
+            <ul>
+              <li>Advanced resistance training techniques</li>
+              <li>Circuit training design and delivery</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge workshop">W5</div>
+          <div class="timeline-content">
+            <div class="timeline-label workshop">Level 3 Workshop 5, In Person</div>
+            <h4>PT: Mock Assessment &amp; Final Q&amp;A (8 hours)</h4>
+            <ul>
+              <li>Full practical assessment mock trial, the complete run-through</li>
+              <li>Open Q&amp;A, your questions, your preparation, your confidence</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge">C6</div>
+          <div class="timeline-content">
+            <div class="timeline-label">Tutor Call 6</div>
+            <h4>Final Check-In &amp; Qualification Readiness</h4>
+            <ul>
+              <li>Level 3 final module check-in</li>
+              <li>Practical assessment review and sign-off preparation</li>
+              <li>Business and career advice, round two</li>
+              <li>Final open Q&amp;A, you are ready</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Inline CTA 2 ── -->
+  <div class="container">
+    <div class="inline-cta">
+      <div>
+        <h3>Want to walk through the journey together?</h3>
+        <p>Book a call and we'll map out exactly how this fits around your current life. No guessing, no pressure.</p>
+      </div>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/jamie-henderson-personal-calendar-f-eksbfz2" target="_blank" rel="noopener" class="btn btn-primary"><i class="ph-bold ph-calendar-blank"></i> Book a Free Discovery Call</a>
+    </div>
+  </div>
+
+  <!-- ══ PRICING ══ -->
+  <section>
+    <div class="container">
+      <div class="section-label"><i class="ph-fill ph-tag"></i> Course Options</div>
+      <h2>Three pathways. One destination.</h2>
+      <p class="lead" style="max-width:680px; margin-top:.75rem;">
+        Choose the package that fits your goals, your timeline, and how much support you want. All three include your full Level 3 Diploma in Gym Instructing and Personal Training.
+      </p>
+
+      <div class="pricing-grid">
+
+        <!-- Coach -->
+        <div class="pricing-card standard">
+          <div class="pricing-type">Online</div>
+          <div class="pricing-name">Coach</div>
+          <div class="pricing-mode">Study at your own pace, fully online</div>
+          <ul class="pricing-features">
+            <li><i class="ph-fill ph-check-circle"></i> Level 3 Diploma, full qualification</li>
+            <li><i class="ph-fill ph-check-circle"></i> 1-to-1 tutor support 24/7 (WhatsApp)</li>
+            <li><i class="ph-fill ph-check-circle"></i> Flexible, personalised study plan</li>
+            <li><i class="ph-fill ph-check-circle"></i> 6 × 30-min tutor support calls</li>
+            <li><i class="ph-fill ph-check-circle"></i> Career coaching included</li>
+            <li><i class="ph-fill ph-check-circle"></i> Access to FCC Facebook community</li>
+            <li><i class="ph-fill ph-x-circle no"></i> In-person workshops</li>
+            <li><i class="ph-fill ph-x-circle no"></i> Access to FCC Toolkit</li>
+            <li><i class="ph-fill ph-x-circle no"></i> 6-month business mentorship</li>
+          </ul>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/jamie-henderson-personal-calendar-f-eksbfz2" target="_blank" rel="noopener" class="btn btn-outline pricing-cta">Get Started <i class="ph-bold ph-arrow-right"></i></a>
+        </div>
+
+        <!-- Expert -->
+        <div class="pricing-card featured">
+          <div class="featured-badge">Most Popular</div>
+          <div class="pricing-type">Hybrid</div>
+          <div class="pricing-name">Expert</div>
+          <div class="pricing-mode">Online theory + in-person workshops</div>
+          <ul class="pricing-features">
+            <li><i class="ph-fill ph-check-circle"></i> Level 3 Diploma, full qualification</li>
+            <li><i class="ph-fill ph-check-circle"></i> 1-to-1 tutor support 24/7 (WhatsApp)</li>
+            <li><i class="ph-fill ph-check-circle"></i> Flexible, personalised study plan</li>
+            <li><i class="ph-fill ph-check-circle"></i> 6 × 30-min tutor support calls</li>
+            <li><i class="ph-fill ph-check-circle"></i> Career coaching included</li>
+            <li><i class="ph-fill ph-check-circle"></i> Access to FCC Facebook community</li>
+            <li><i class="ph-fill ph-check-circle"></i> 5 × in-person workshops (8 hrs each)</li>
+            <li><i class="ph-fill ph-check-circle"></i> Access to the FCC Toolkit</li>
+            <li><i class="ph-fill ph-x-circle no"></i> 6-month business mentorship</li>
+          </ul>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/jamie-henderson-personal-calendar-f-eksbfz2" target="_blank" rel="noopener" class="btn btn-primary pricing-cta">Get Started <i class="ph-bold ph-arrow-right"></i></a>
+        </div>
+
+        <!-- Mastermind -->
+        <div class="pricing-card premium">
+          <div class="pricing-type">Hybrid, Premium</div>
+          <div class="pricing-name">Mastermind</div>
+          <div class="pricing-mode">Everything, plus 6-month business mentorship</div>
+          <ul class="pricing-features">
+            <li><i class="ph-fill ph-check-circle"></i> Level 3 Diploma, full qualification</li>
+            <li><i class="ph-fill ph-check-circle"></i> 1-to-1 tutor support 24/7 (WhatsApp)</li>
+            <li><i class="ph-fill ph-check-circle"></i> Flexible, personalised study plan</li>
+            <li><i class="ph-fill ph-check-circle"></i> 6 × 30-min tutor support calls</li>
+            <li><i class="ph-fill ph-check-circle"></i> Career coaching included</li>
+            <li><i class="ph-fill ph-check-circle"></i> Access to FCC Facebook community</li>
+            <li><i class="ph-fill ph-check-circle"></i> 5 × in-person workshops (8 hrs each)</li>
+            <li><i class="ph-fill ph-check-circle"></i> Access to the FCC Toolkit</li>
+            <li><i class="ph-fill ph-check-circle"></i><strong style="color:var(--text-heading);">6-month business mentorship included</strong></li>
+          </ul>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/jamie-henderson-personal-calendar-f-eksbfz2" target="_blank" rel="noopener" class="btn btn-outline pricing-cta">Get Started <i class="ph-bold ph-arrow-right"></i></a>
+        </div>
+
+      </div>
+
+      <div class="highlight-box" style="margin-top:2.5rem;">
+        <p><strong>Not sure which option is right for you?</strong> That's exactly what the discovery call is for. We'll look at your learning style, goals, and budget together and recommend the right fit with zero pressure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ COMPETITOR COMPARISON ══ -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-label"><i class="ph-fill ph-scales"></i> How We Compare</div>
+      <h2>Not all PT courses are created equal.</h2>
+      <p class="lead" style="max-width:680px; margin-top:.75rem;">
+        There are dozens of PT qualification providers in the UK. Here's an honest look at how The FCC compares to some of the most well-known alternatives.
+      </p>
+
+      <div class="compare-table-wrap" style="margin-top:2.5rem;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th class="feature-col">Feature</th>
+              <th class="fcc">The FCC</th>
+              <th>OriGym</th>
+              <th>Premier Training</th>
+              <th>Future Fit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-col">Pass Rate Guarantee</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> 100% Verified</td>
+              <td><i class="ph-fill ph-minus-circle partial"></i> Not published</td>
+              <td><i class="ph-fill ph-minus-circle partial"></i> Not published</td>
+              <td><i class="ph-fill ph-minus-circle partial"></i> Not published</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Named 1-to-1 Tutor</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> Dedicated tutor</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Generic support</td>
+              <td><i class="ph-fill ph-minus-circle partial"></i> Varies by package</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Support desk</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Unlimited WhatsApp Support</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> Included</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Not offered</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Not offered</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Not offered</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Scheduled Support Calls</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> 6 × 30-min calls</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Not standard</td>
+              <td><i class="ph-fill ph-minus-circle partial"></i> Limited</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Not standard</td>
+            </tr>
+            <tr>
+              <td class="feature-col">In-Person Workshops</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> 5 workshops (Expert+)</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Available</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Available</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Available</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Career &amp; Business Coaching</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> Included in all plans</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Not included</td>
+              <td><i class="ph-fill ph-minus-circle partial"></i> Paid add-on</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Not included</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Business Mentorship</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> 6 months (Mastermind)</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Not offered</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Not offered</td>
+              <td><i class="ph-fill ph-x-circle cross"></i> Not offered</td>
+            </tr>
+            <tr>
+              <td class="feature-col">0% Finance</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> All packages</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Available</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Available</td>
+              <td><i class="ph-fill ph-minus-circle partial"></i> Limited options</td>
+            </tr>
+            <tr>
+              <td class="feature-col">CIMSPA / OFQUAL Reg.</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> Fully endorsed</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Yes</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Yes</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-size:.82rem; margin-top:1rem; color:#475569; font-style:italic;">Competitor information based on publicly available data at time of publication. Prices and features may vary. Always check directly with the provider.</p>
+    </div>
+  </section>
+
+  <!-- ══ COURSE TYPE COMPARISON ══ -->
+  <section>
+    <div class="container">
+      <div class="section-label"><i class="ph-fill ph-books"></i> Which Course Type Suits You?</div>
+      <h2>Three ways to qualify. One standard.</h2>
+      <p class="lead" style="max-width:680px; margin-top:.75rem;">
+        Every FCC course leads to the same nationally recognised Level 3 Diploma. The difference is how you get there. Here's a side-by-side breakdown to help you find the right fit.
+      </p>
+
+      <div class="compare-table-wrap" style="margin-top:2.5rem;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th class="feature-col">Feature</th>
+              <th class="fcc" style="color:var(--secondary);">Online</th>
+              <th style="color:var(--gold);">Fast Track</th>
+              <th style="color:var(--gold);">In-Person</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-col">Learning Style</td>
+              <td class="fcc-col">Self-paced, fully remote</td>
+              <td>Intensive, structured sprint</td>
+              <td>Face-to-face, tutor-led</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Study Location</td>
+              <td class="fcc-col">Anywhere, any device</td>
+              <td>Mostly remote with practicals</td>
+              <td>Edinburgh venue, in person</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Completion Timeline</td>
+              <td class="fcc-col">Fully flexible, your pace</td>
+              <td>Weeks to a few months</td>
+              <td>Structured, agreed schedule</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Best For</td>
+              <td class="fcc-col">Busy lives, full-time workers, parents</td>
+              <td>Career changers wanting to qualify fast</td>
+              <td>Hands-on learners who prefer live teaching</td>
+            </tr>
+            <tr>
+              <td class="feature-col">1-to-1 Tutor Support</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> Included</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Included</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Included</td>
+            </tr>
+            <tr>
+              <td class="feature-col">WhatsApp Support</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> Unlimited</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Unlimited</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Unlimited</td>
+            </tr>
+            <tr>
+              <td class="feature-col">6 Tutor Support Calls</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> Included</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Included</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Included</td>
+            </tr>
+            <tr>
+              <td class="feature-col">In-Person Workshops</td>
+              <td class="fcc-col"><i class="ph-fill ph-x-circle cross"></i> Not included</td>
+              <td><i class="ph-fill ph-minus-circle partial"></i> Practicals only</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Full programme</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Practical Assessments</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> Arranged separately</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Included in sprint</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Included on site</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Career Coaching</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> Included</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Included</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Included</td>
+            </tr>
+            <tr>
+              <td class="feature-col">0% Finance</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> Available</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Available</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Available</td>
+            </tr>
+            <tr>
+              <td class="feature-col">CIMSPA / OFQUAL Qualification</td>
+              <td class="fcc-col"><i class="ph-fill ph-check-circle check"></i> Full Level 3 Diploma</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Full Level 3 Diploma</td>
+              <td><i class="ph-fill ph-check-circle check"></i> Full Level 3 Diploma</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box" style="margin-top:2rem;">
+        <p><strong>Not sure which route is right for you?</strong> That's exactly what the discovery call is for. We'll match you to the format that fits your life, your learning style, and your timeline.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Inline CTA 3 ── -->
+  <div class="container">
+    <div class="inline-cta">
+      <div>
+        <h3>Still weighing up your options?</h3>
+        <p>We're happy to compare packages on the call. Bring your questions and we'll give you straight answers.</p>
+      </div>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/jamie-henderson-personal-calendar-f-eksbfz2" target="_blank" rel="noopener" class="btn btn-primary"><i class="ph-bold ph-phone-call"></i> Book a Free Call</a>
+    </div>
+  </div>
+
+  <!-- ══ TESTIMONIALS ══ -->
+  <section>
+    <div class="container">
+      <div class="section-label"><i class="ph-fill ph-quotes"></i> Graduate Stories</div>
+      <h2>From quiz to qualified.</h2>
+      <p class="lead" style="max-width:680px; margin-top:.75rem;">Real stories from FCC graduates who were exactly where you are now.</p>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <p class="testimonial-text">"I was working full-time and thought I'd never find the time. The flexible approach meant I could study in evenings and weekends without burning out. I passed first time and landed 8 clients within 6 weeks of qualifying."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SR</div>
+            <div>
+              <div class="author-name">Sarah R.</div>
+              <div class="author-detail">Level 3 PT, now self-employed</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <p class="testimonial-text">"The workshops were brilliant. Nothing like what I'd expected. Hands-on, practical, and the mock assessment took all the nerves away. Having WhatsApp support meant I never felt stuck on anything."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CM</div>
+            <div>
+              <div class="author-name">Craig M.</div>
+              <div class="author-detail">Level 3 PT, Commercial gym</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <p class="testimonial-text">"I'd been in a job I hated for years. The Mastermind package gave me not just the qualification but a real business plan. 6 months later I've got a full client book and I'm earning more than I ever did in an office."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">LK</div>
+            <div>
+              <div class="author-name">Laura K.</div>
+              <div class="author-detail">Mastermind Graduate, PT Business Owner</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FAQ ══ -->
+  <section class="section-dark">
+    <div class="container-narrow">
+      <div class="section-label"><i class="ph-fill ph-question"></i> FAQs</div>
+      <h2>Your questions, answered.</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            How long does the Level 3 PT course take?
+            <i class="ph-bold ph-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>There is no fixed timeline. Your journey is fully personalised. Most students complete the Level 3 Diploma in 3 to 6 months, but you can go faster or slower depending on your study hours each week. We'll set a realistic plan together on your first call.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Is the qualification nationally recognised?
+            <i class="ph-bold ph-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. Your Level 3 Diploma in Gym Instructing and Personal Training is CIMSPA-endorsed and OFQUAL-regulated: the industry-standard qualification accepted by every major gym operator, leisure centre, and employer in the UK.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            What if I've never studied fitness before?
+            <i class="ph-bold ph-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>No prior experience is required. The Level 3 Diploma starts at Level 2 Gym Instructor. You'll build your knowledge from the ground up. Our tutor support and workshops are designed to take you from beginner to qualified professional.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            How does the 0% finance work?
+            <i class="ph-bold ph-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We offer flexible payment plans with 0% interest so you can spread the cost of your course without paying anything extra. We'll confirm your payment plan on your first tutor call and tailor it to what works for you.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Where are the in-person workshops held?
+            <i class="ph-bold ph-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Workshops are held in Edinburgh. Exact venue details and dates are confirmed separately once you enrol. The Expert and Mastermind packages include all 5 in-person workshops across Level 2 and Level 3.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            What is the FCC Toolkit?
+            <i class="ph-bold ph-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>The FCC Toolkit is a curated collection of business and coaching resources included with Expert and Mastermind packages: templates, guides, and tools to help you launch your PT business after qualifying.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            What does the 6-month business mentorship include?
+            <i class="ph-bold ph-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>The Mastermind mentorship takes you beyond qualification into your first six months as a PT. You'll work with Jamie to build your client acquisition strategy, set pricing, develop your online presence, and build the foundations of a sustainable PT business.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Can I do the course alongside a full-time job?
+            <i class="ph-bold ph-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. The majority of our students study around full-time work. Your personalised learning plan will be built around your actual weekly availability from the very first call.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FINAL CTA BAND ══ -->
+  <section class="cta-band">
+    <div class="container-narrow" style="text-align:center;">
+      <div class="section-label" style="justify-content:center;"><i class="ph-fill ph-rocket-launch"></i> Ready to start?</div>
+      <h2>The only thing left to do is book the call.</h2>
+      <p class="lead">
+        A free 30-minute discovery call with Jamie. We'll talk through your goals, recommend the right course option, and answer every question you have, with zero pressure.
+      </p>
+      <div class="btn-group">
+        <a href="https://api.leadconnectorhq.com/widget/bookings/jamie-henderson-personal-calendar-f-eksbfz2" target="_blank" rel="noopener" class="btn btn-primary btn-large"><i class="ph-bold ph-calendar-blank"></i> Book Your Free Discovery Call</a>
+        <a href="https://fitnesscoachchronicle.com" class="btn btn-outline btn-large">Visit Our Website <i class="ph-bold ph-arrow-right"></i></a>
+      </div>
+      <p style="margin-top:2rem; font-size:.88rem; color:#475569;">No sales pressure. No obligation. Just an honest conversation about your future.</p>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="https://fitnesscoachchronicle.com" class="footer-logo">
+          <img src="https://fitnesscoachchronicle.com/wp-content/uploads/2025/05/AI_FILE.ai-removebg-preview.png" alt="The Fitness Coach Chronicle">
+        </a>
+        <div class="footer-links">
+          <a href="https://fitnesscoachchronicle.com">Home</a>
+          <a href="https://fitnesscoachchronicle.com/level-3-pt-course-edinburgh/">Level 3 Course</a>
+          <a href="https://fitnesscoachchronicle.com/about">About</a>
+          <a href="https://fitnesscoachchronicle.com/contact">Contact</a>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/jamie-henderson-personal-calendar-f-eksbfz2" target="_blank" rel="noopener" style="color:var(--secondary); font-weight:700;">Book a Call</a>
+        </div>
+        <p class="footer-copy">© 2025 The Fitness Coach Chronicle. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(el) {
+      const isOpen = el.classList.contains('open');
+      document.querySelectorAll('.faq-question.open').forEach(q => {
+        q.classList.remove('open');
+        q.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        el.classList.add('open');
+        el.nextElementSibling.classList.add('open');
+      }
+    }
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.earning-card, .why-item, .timeline-item, .pricing-card, .testimonial-card, .faq-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>

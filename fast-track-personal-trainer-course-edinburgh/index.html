@@ -75,6 +75,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="/css/styles.css?v=3">
+  <style>
+    .loc-row { display:flex; align-items:center; justify-content:space-between; padding:0.65rem 1rem; border-radius:10px; text-decoration:none; transition:background 0.2s; gap:0.75rem; }
+    .loc-row.active { background:rgba(30,230,253,0.07); border:1px solid rgba(30,230,253,0.25); }
+    .loc-row.active:hover { background:rgba(30,230,253,0.12); }
+    .loc-row.soon { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07); cursor:default; opacity:0.6; }
+    .loc-badge { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; border-radius:999px; padding:0.18rem 0.55rem; white-space:nowrap; }
+    .loc-badge.active { color:var(--secondary); background:rgba(30,230,253,0.1); border:1px solid rgba(30,230,253,0.2); }
+    .loc-badge.soon { color:#64748b; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); }
+    @media(max-width:640px){ .map-location-layout{ flex-direction:column; align-items:center; } }
+  </style>
 </head>
 <body>
 
@@ -336,6 +346,137 @@
             <button class="faq-question" aria-expanded="false"><span>Is 0% finance available on the fast-track course?</span><i class="ph-bold ph-plus faq-icon"></i></button>
             <div class="faq-answer"><p>Yes. 0% interest finance is available on all FCC courses including the fast-track programme. Speak to an advisor about the payment options.</p></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Edinburgh Local SEO Block -->
+    <section class="page-section-alt" id="fast-track-pt-edinburgh">
+      <div class="container">
+        <div class="split-section align-center" style="padding:0;">
+          <div class="split-content fade-up">
+            <div class="badge"><i class="ph-fill ph-map-pin"></i> Edinburgh, Scotland</div>
+            <h2 style="font-size:2.4rem; margin-top:1rem;">Fast-Track Your PT Career in Edinburgh</h2>
+            <p style="font-size:1.05rem; color:var(--text-body); line-height:1.85; margin-bottom:1.25rem;">Edinburgh's fitness industry is one of Scotland's most active — and if you want to get into it fast, the fast-track route is designed for exactly that. Career changers, redundancy returners, and ambitious individuals who want their Level 3 qualification without spending months studying find the fast-track the most direct path from decision to qualified PT.</p>
+            <p style="font-size:1.05rem; color:var(--text-body); line-height:1.85; margin-bottom:1.25rem;">The demand for qualified PTs across Edinburgh's commercial gyms, independent studios, and self-employed market is consistent and growing. Operators including PureGym, Nuffield Health, and boutique studios all recruit CIMSPA-endorsed PTs — and the faster you qualify, the sooner you can start building your client base and earning.</p>
+            <p style="font-size:1.05rem; color:var(--text-body); line-height:1.85;">Your fast-track practicals take place at <a href="https://platformhealthandfitness.co.uk/" target="_blank" rel="noopener" style="color:var(--secondary);">Platform Health &amp; Fitness</a> in Leith — a working commercial gym, not a training room. Every practical session reflects the real environment you'll be coaching in from day one.</p>
+          </div>
+          <div class="split-visual fade-up">
+            <div class="glass-card" style="padding:2.5rem; border-color:rgba(30,230,253,0.2);">
+              <h3 style="font-size:1.2rem; margin-bottom:1.5rem; color:var(--secondary);">Why Fast-Track in Edinburgh?</h3>
+              <div style="display:flex; flex-direction:column; gap:1.25rem;">
+                <div style="display:flex; align-items:flex-start; gap:1rem;">
+                  <div style="flex-shrink:0; width:40px; height:40px; border-radius:50%; background:rgba(30,230,253,0.1); border:1px solid rgba(30,230,253,0.25); display:flex; align-items:center; justify-content:center;"><i class="ph-duotone ph-lightning" style="font-size:1.1rem; color:var(--secondary);"></i></div>
+                  <div><strong style="display:block; font-size:0.95rem;">Qualify in weeks, not months</strong><span style="color:var(--text-body); font-size:0.875rem;">The fast-track condenses your study and practicals into an intensive, structured sprint so you can start earning sooner.</span></div>
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:1rem;">
+                  <div style="flex-shrink:0; width:40px; height:40px; border-radius:50%; background:rgba(30,230,253,0.1); border:1px solid rgba(30,230,253,0.25); display:flex; align-items:center; justify-content:center;"><i class="ph-duotone ph-buildings" style="font-size:1.1rem; color:var(--secondary);"></i></div>
+                  <div><strong style="display:block; font-size:0.95rem;">Strong employer base</strong><span style="color:var(--text-body); font-size:0.875rem;">Edinburgh's commercial gyms, leisure centres, and independent studios actively hire CIMSPA-endorsed PTs year-round.</span></div>
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:1rem;">
+                  <div style="flex-shrink:0; width:40px; height:40px; border-radius:50%; background:rgba(30,230,253,0.1); border:1px solid rgba(30,230,253,0.25); display:flex; align-items:center; justify-content:center;"><i class="ph-duotone ph-currency-gbp" style="font-size:1.1rem; color:var(--secondary);"></i></div>
+                  <div><strong style="display:block; font-size:0.95rem;">Competitive earning potential</strong><span style="color:var(--text-body); font-size:0.875rem;">Self-employed PTs in Edinburgh typically charge £40–£70 per session, with a full client base achievable within 12 months of qualifying.</span></div>
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:1rem;">
+                  <div style="flex-shrink:0; width:40px; height:40px; border-radius:50%; background:rgba(30,230,253,0.1); border:1px solid rgba(30,230,253,0.25); display:flex; align-items:center; justify-content:center;"><i class="ph-duotone ph-certificate" style="font-size:1.1rem; color:var(--secondary);"></i></div>
+                  <div><strong style="display:block; font-size:0.95rem;">CIMSPA recognition</strong><span style="color:var(--text-body); font-size:0.875rem;">The same nationally recognised Level 3 Diploma as the standard route — just achieved faster. Accepted by every major gym in the UK.</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Hub — Interactive Pin Map -->
+    <section class="page-section" id="pt-courses-by-location">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>FCC Personal Trainer Courses by Location</h2>
+          <p>Edinburgh is where we started. More locations across Scotland are coming soon. Studying remotely? The <a href="/online-personal-trainer-course-edinburgh/" style="color:var(--secondary);">fully online course</a> is available UK-wide.</p>
+        </div>
+
+        <div class="fade-up map-location-layout" style="display:flex; align-items:flex-start; justify-content:center; gap:2.5rem; margin-top:2.5rem; flex-wrap:wrap;">
+
+          <!-- Scotland SVG Pin Map -->
+          <div class="glass-card" style="padding:1.25rem 1.5rem 1.5rem; flex-shrink:0; width:210px; background:radial-gradient(ellipse at 55% 70%, rgba(30,230,253,0.05) 0%, transparent 65%), var(--glass-bg, rgba(15,23,42,0.6));">
+            <p style="font-size:0.68rem; text-transform:uppercase; letter-spacing:2.5px; color:var(--secondary); font-weight:700; margin:0 0 0.75rem; text-align:center;">Scotland</p>
+            <svg viewBox="0 0 170 245" width="178" style="overflow:visible; display:block; margin:0 auto;" aria-hidden="true">
+
+              <!-- Scotland mainland outline (simplified) -->
+              <path d="M 79,237 L 80,215 L 65,200 L 50,212 L 42,190 L 38,175 L 32,160 L 28,145 L 18,128 L 15,108 L 22,88 L 35,78 L 50,68 L 75,62 L 100,58 L 122,58 L 135,65 L 148,78 L 158,100 L 162,121 L 158,143 L 150,158 L 140,168 L 145,178 L 142,185 L 138,198 L 125,215 L 90,228 Z"
+                fill="rgba(30,230,253,0.04)" stroke="rgba(30,230,253,0.22)" stroke-width="1.5" stroke-linejoin="round"/>
+
+              <!-- Aberdeen — coming soon -->
+              <circle cx="155" cy="140" r="4" fill="rgba(100,116,139,0.25)" stroke="rgba(100,116,139,0.45)" stroke-width="1.2"/>
+              <text x="161" y="144" font-size="8" fill="#64748b" font-family="Karla, sans-serif">Aberdeen</text>
+
+              <!-- Dundee — coming soon -->
+              <circle cx="136" cy="165" r="4" fill="rgba(100,116,139,0.25)" stroke="rgba(100,116,139,0.45)" stroke-width="1.2"/>
+              <text x="142" y="169" font-size="8" fill="#64748b" font-family="Karla, sans-serif">Dundee</text>
+
+              <!-- Stirling — coming soon -->
+              <circle cx="97" cy="180" r="4" fill="rgba(100,116,139,0.25)" stroke="rgba(100,116,139,0.45)" stroke-width="1.2"/>
+              <text x="89" y="177" font-size="8" fill="#64748b" font-family="Karla, sans-serif" text-anchor="end">Stirling</text>
+
+              <!-- Glasgow — coming soon -->
+              <circle cx="85" cy="192" r="4" fill="rgba(100,116,139,0.25)" stroke="rgba(100,116,139,0.45)" stroke-width="1.2"/>
+              <text x="77" y="206" font-size="8" fill="#64748b" font-family="Karla, sans-serif" text-anchor="middle">Glasgow</text>
+
+              <!-- Edinburgh — ACTIVE with pulse -->
+              <circle cx="128" cy="187" r="6" fill="none" stroke="rgba(30,230,253,0.55)" stroke-width="1.2">
+                <animate attributeName="r" values="6;22" dur="2.2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.7;0" dur="2.2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="128" cy="187" r="6" fill="none" stroke="rgba(30,230,253,0.3)" stroke-width="1">
+                <animate attributeName="r" values="6;22" dur="2.2s" begin="0.8s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.5;0" dur="2.2s" begin="0.8s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="128" cy="187" r="5" fill="#1ee6fd"/>
+              <circle cx="128" cy="187" r="2.5" fill="white" opacity="0.9"/>
+              <text x="128" y="202" font-size="8.5" fill="#1ee6fd" font-weight="700" font-family="Karla, sans-serif" text-anchor="middle">Edinburgh</text>
+
+            </svg>
+          </div>
+
+          <!-- Location List -->
+          <div style="flex:1; min-width:210px; max-width:310px; display:flex; flex-direction:column; gap:0.45rem; padding-top:2rem;">
+
+            <a href="/fast-track-personal-trainer-course-edinburgh/" class="loc-row active">
+              <span style="display:flex; align-items:center; gap:0.55rem; font-weight:600; font-size:0.95rem; color:var(--text-heading);"><i class="ph-fill ph-map-pin" style="color:var(--secondary); font-size:1rem;"></i>Edinburgh</span>
+              <span class="loc-badge active">Active</span>
+            </a>
+
+            <div class="loc-row soon">
+              <span style="display:flex; align-items:center; gap:0.55rem; font-weight:600; font-size:0.95rem; color:var(--text-body);"><i class="ph-duotone ph-map-pin" style="color:#64748b; font-size:1rem;"></i>Glasgow</span>
+              <span class="loc-badge soon">Coming Soon</span>
+            </div>
+
+            <div class="loc-row soon">
+              <span style="display:flex; align-items:center; gap:0.55rem; font-weight:600; font-size:0.95rem; color:var(--text-body);"><i class="ph-duotone ph-map-pin" style="color:#64748b; font-size:1rem;"></i>Dundee</span>
+              <span class="loc-badge soon">Coming Soon</span>
+            </div>
+
+            <div class="loc-row soon">
+              <span style="display:flex; align-items:center; gap:0.55rem; font-weight:600; font-size:0.95rem; color:var(--text-body);"><i class="ph-duotone ph-map-pin" style="color:#64748b; font-size:1rem;"></i>Aberdeen</span>
+              <span class="loc-badge soon">Coming Soon</span>
+            </div>
+
+            <div class="loc-row soon">
+              <span style="display:flex; align-items:center; gap:0.55rem; font-weight:600; font-size:0.95rem; color:var(--text-body);"><i class="ph-duotone ph-map-pin" style="color:#64748b; font-size:1rem;"></i>Stirling</span>
+              <span class="loc-badge soon">Coming Soon</span>
+            </div>
+
+            <div style="height:1px; background:rgba(255,255,255,0.07); margin:0.3rem 0;"></div>
+
+            <a href="/online-personal-trainer-course-edinburgh/" class="loc-row active">
+              <span style="display:flex; align-items:center; gap:0.55rem; font-weight:600; font-size:0.95rem; color:var(--text-heading);"><i class="ph-fill ph-globe" style="color:var(--secondary); font-size:1rem;"></i>Online — UK Wide</span>
+              <span class="loc-badge active">Active</span>
+            </a>
+
+            <p style="font-size:0.82rem; color:var(--text-body); margin-top:0.75rem; line-height:1.65;">New location coming near you? <a href="/contact" style="color:var(--secondary); font-weight:600;">Join the waitlist.</a></p>
+          </div>
+
         </div>
       </div>
     </section>
