@@ -148,8 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const nextStepId = e.target.getAttribute('data-next');
             const answer = e.target.getAttribute('data-answer');
 
-            // Store answer keyed by step ID
-            if (answer) quizAnswers[currentStepEl.id] = answer;
+            // Store answer keyed by step ID (fall back to button text for steps without data-answer)
+            quizAnswers[currentStepEl.id] = answer || e.target.textContent.trim();
 
             // Hide current step
             currentStepEl.classList.remove('active');
@@ -167,11 +167,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Handle final Form Submit — determine recommendation and redirect to thank-you page
+    // Handle final Form Submit — POST to GHL webhook then redirect
     const quizForm = document.getElementById('quiz-lead-form');
     if(quizForm) {
-        quizForm.addEventListener('submit', (e) => {
+        quizForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            const inputs = quizForm.querySelectorAll('input');
+            const fullName = inputs[0].value.trim();
+            const email = inputs[1].value.trim();
+            const phone = inputs[2].value.trim();
+            const nameParts = fullName.split(' ');
+            const firstName = nameParts[0] || '';
+            const lastName = nameParts.slice(1).join(' ') || '';
 
             const studyTime = quizAnswers['step-3'] || '';
             const edinburgh = quizAnswers['step-4'] || '';
@@ -183,6 +191,34 @@ document.addEventListener("DOMContentLoaded", () => {
                 course = 'fast-track';
             } else {
                 course = 'hybrid';
+            }
+
+            const payload = {
+                name: fullName,
+                firstName,
+                lastName,
+                email,
+                phone,
+                source: 'Suitability Quiz',
+                tags: ['suitability-quiz'],
+                customField: {
+                    quiz_q1_training_experience: quizAnswers['step-1'] || '',
+                    quiz_q2_motivation: quizAnswers['step-2'] || '',
+                    quiz_q3_study_time: studyTime,
+                    quiz_q4_edinburgh: edinburgh,
+                    quiz_recommended_course: course
+                }
+            };
+
+            try {
+                await fetch('https://services.leadconnectorhq.com/hooks/7SAACxzSKnpblPNlayky/webhook-trigger/25706546-e22c-47b2-84f2-c71ed88f8b05', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                    keepalive: true
+                });
+            } catch (_) {
+                // Proceed to redirect even if webhook fails
             }
 
             window.location.href = '/thank-you?course=' + course;
