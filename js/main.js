@@ -213,7 +213,8 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
                 await fetch('https://services.leadconnectorhq.com/hooks/7SAACxzSKnpblPNlayky/webhook-trigger/96766bc8-e57a-4558-bb78-04026ba51742', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain' },
                     body: JSON.stringify(payload),
                     keepalive: true
                 });
