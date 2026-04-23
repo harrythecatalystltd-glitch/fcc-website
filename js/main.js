@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle final Form Submit — POST to GHL webhook then redirect
     const quizForm = document.getElementById('quiz-lead-form');
     if(quizForm) {
-        quizForm.addEventListener('submit', async (e) => {
+        quizForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
             const inputs = quizForm.querySelectorAll('input');
@@ -210,19 +210,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             };
 
-            try {
-                await fetch('https://services.leadconnectorhq.com/hooks/7SAACxzSKnpblPNlayky/webhook-trigger/96766bc8-e57a-4558-bb78-04026ba51742', {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'text/plain' },
-                    body: JSON.stringify(payload),
-                    keepalive: true
-                });
-            } catch (_) {
-                // Proceed to redirect even if webhook fails
+            const GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/7SAACxzSKnpblPNlayky/webhook-trigger/96766bc8-e57a-4558-bb78-04026ba51742';
+            const body = JSON.stringify(payload);
+
+            // sendBeacon is fire-and-forget and survives page navigation
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon(GHL_WEBHOOK, new Blob([body], { type: 'application/json' }));
+            } else {
+                fetch(GHL_WEBHOOK, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body, keepalive: true }).catch(() => {});
             }
 
-            window.location.href = '/thank-you?course=' + course;
+            // Short delay to let beacon dispatch before navigation
+            setTimeout(() => {
+                window.location.href = '/thank-you?course=' + course;
+            }, 400);
         });
     }
 
