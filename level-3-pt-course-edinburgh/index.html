@@ -101,6 +101,14 @@
     .loc-badge.active { color:var(--secondary); background:rgba(30,230,253,0.1); border:1px solid rgba(30,230,253,0.2); }
     .loc-badge.soon { color:#64748b; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); }
     @media(max-width:640px){ .map-location-layout{ flex-direction:column; align-items:center; } }
+    #guide-modal input {
+      width: 100%; padding: 0.85rem 1rem; background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12); border-radius: 10px;
+      color: #f8fafc; font-size: 0.95rem; font-family: inherit;
+      transition: border-color 0.2s; box-sizing: border-box; margin-top: 0.35rem;
+    }
+    #guide-modal input::placeholder { color: #64748b; }
+    #guide-modal input:focus { outline: none; border-color: var(--secondary); }
   </style>
 </head>
 <body>
