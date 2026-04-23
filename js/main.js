@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             try {
-                await fetch('https://services.leadconnectorhq.com/hooks/7SAACxzSKnpblPNlayky/webhook-trigger/25706546-e22c-47b2-84f2-c71ed88f8b05', {
+                await fetch('https://services.leadconnectorhq.com/hooks/7SAACxzSKnpblPNlayky/webhook-trigger/96766bc8-e57a-4558-bb78-04026ba51742', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload),
