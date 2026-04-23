@@ -225,7 +225,54 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 8. FAQ Accordion
+    // 8. Contact Form — GHL webhook
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Honeypot check
+            if (contactForm.querySelector('#website').value) return;
+
+            const firstName = contactForm.querySelector('#first-name').value.trim();
+            const lastName = contactForm.querySelector('#last-name').value.trim();
+            const email = contactForm.querySelector('#email').value.trim();
+            const phone = contactForm.querySelector('#phone').value.trim();
+            const course = contactForm.querySelector('#course').value;
+            const message = contactForm.querySelector('#message').value.trim();
+
+            const payload = {
+                name: `${firstName} ${lastName}`.trim(),
+                firstName,
+                lastName,
+                email,
+                phone,
+                source: 'Contact Form',
+                tags: ['contact-form'],
+                customField: {
+                    enquiry_course: course,
+                    enquiry_message: message
+                }
+            };
+
+            fetch('/api/quiz-webhook', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+                keepalive: true
+            }).catch(() => {});
+
+            // Show inline success message
+            contactForm.innerHTML = `
+                <div style="text-align:center; padding:2rem 0;">
+                    <i class="ph-fill ph-check-circle" style="font-size:3rem; color:var(--secondary); display:block; margin-bottom:1rem;"></i>
+                    <h3 style="margin-bottom:0.5rem;">Message Sent!</h3>
+                    <p style="color:var(--text-body);">Thanks ${firstName}, we'll be in touch usually within a few hours.</p>
+                </div>`;
+        });
+    }
+
+    // 10. FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const btn = item.querySelector('.faq-question');
