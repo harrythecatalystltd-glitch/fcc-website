@@ -297,14 +297,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const email = document.getElementById('gm-email').value.trim();
             const phone = document.getElementById('gm-phone').value.trim();
 
+            const source = guideModal.dataset.source || 'PT Course Guide';
+            const tags = (guideModal.dataset.tags || 'course-guide').split(',');
+
             fetch('/api/quiz-webhook', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     name: `${firstName} ${lastName}`.trim(),
                     firstName, lastName, email, phone,
-                    source: 'PT Course Guide - Level 3',
-                    tags: ['course-guide', 'level-3']
+                    source, tags
                 }),
                 keepalive: true
             }).catch(() => {});

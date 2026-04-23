@@ -74,6 +74,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="/css/styles.css?v=4">
+  <style>
+    #guide-modal input {
+      width: 100%; padding: 0.85rem 1rem; background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12); border-radius: 10px;
+      color: #f8fafc; font-size: 0.95rem; font-family: inherit;
+      transition: border-color 0.2s; box-sizing: border-box; margin-top: 0.35rem;
+    }
+    #guide-modal input::placeholder { color: #64748b; }
+    #guide-modal input:focus { outline: none; border-color: var(--secondary); }
+  </style>
 </head>
 <body>
 
@@ -119,7 +129,7 @@
         <p class="fade-up">Study your Level 3 PT qualification entirely online. Self-paced e-learning, live lectures, scheduled 1-1 sessions with your tutor, and video practical submissions. CIMSPA-endorsed, and designed for people who need to fit qualification around work, family, and real life.</p>
         <div class="page-hero-cta fade-up">
           <a href="/free-suitability-quiz" class="btn btn-primary btn-large">Find My Start Date <i class="ph-bold ph-arrow-right"></i></a>
-          <a href="/contact" class="btn btn-glow">Ask About the Course</a>
+          <button type="button" class="btn btn-glow guide-modal-trigger">Get your PT Course Guide <i class="ph-bold ph-book-open"></i></button>
         </div>
       </div>
     </section>
@@ -210,7 +220,7 @@
     <div style="text-align:center; padding:2.5rem 1rem;">
       <div class="hero-cta" style="justify-content:center;">
         <a href="/free-suitability-quiz" class="btn btn-primary btn-large">Find My Start Date <i class="ph-bold ph-arrow-right"></i></a>
-        <a href="/contact" class="btn btn-glow">Ask About the Course</a>
+        <button type="button" class="btn btn-glow guide-modal-trigger">Get your PT Course Guide <i class="ph-bold ph-book-open"></i></button>
       </div>
     </div>
 
@@ -292,7 +302,7 @@
     <div style="text-align:center; padding:2.5rem 1rem;">
       <div class="hero-cta" style="justify-content:center;">
         <a href="/free-suitability-quiz" class="btn btn-primary btn-large">Find My Start Date <i class="ph-bold ph-arrow-right"></i></a>
-        <a href="/contact" class="btn btn-glow">Speak to an Advisor</a>
+        <button type="button" class="btn btn-glow guide-modal-trigger">Get your PT Course Guide <i class="ph-bold ph-book-open"></i></button>
       </div>
     </div>
 
@@ -366,12 +376,47 @@
         <p class="fade-up">Take the suitability quiz and find out if the online route fits your schedule — and receive your free Course Guide.</p>
         <div class="cta-banner-btns fade-up">
           <a href="/free-suitability-quiz" class="btn btn-primary btn-large">Find My Start Date for Free <i class="ph-bold ph-arrow-right"></i></a>
-          <a href="/contact" class="btn btn-glow">Ask About the Course</a>
+          <button type="button" class="btn btn-glow guide-modal-trigger">Get your PT Course Guide <i class="ph-bold ph-book-open"></i></button>
         </div>
       </div>
     </section>
 
   </main>
+
+  <!-- PT Course Guide Modal -->
+  <div id="guide-modal" data-source="PT Course Guide - Online" data-tags="course-guide,online" role="dialog" aria-modal="true" aria-labelledby="guide-modal-title" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.75); backdrop-filter:blur(4px); padding:1rem; overflow-y:auto;">
+    <div style="max-width:520px; margin:auto; margin-top:5vh; background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:20px; padding:2.5rem; position:relative; box-shadow:0 24px 64px rgba(0,0,0,0.6);">
+      <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--primary),var(--secondary)); border-radius:20px 20px 0 0;"></div>
+      <button id="guide-modal-close" aria-label="Close" style="position:absolute; top:1.2rem; right:1.2rem; background:none; border:none; color:var(--text-body); cursor:pointer; font-size:1.4rem; line-height:1;"><i class="ph-bold ph-x"></i></button>
+      <div style="text-align:center; margin-bottom:1.5rem;">
+        <i class="ph-fill ph-book-open" style="font-size:2.5rem; color:var(--secondary); display:block; margin-bottom:0.75rem;"></i>
+        <h2 id="guide-modal-title" style="font-size:1.6rem; margin:0 0 0.4rem;">Get Your Free PT Course Guide</h2>
+        <p style="color:var(--text-body); font-size:0.95rem; margin:0;">Full course breakdown, 0% finance options, and start dates — sent straight to your inbox.</p>
+      </div>
+      <form id="guide-modal-form">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div class="input-group">
+            <label for="gm-first-name">First Name</label>
+            <input type="text" id="gm-first-name" placeholder="Jane" required autocomplete="given-name">
+          </div>
+          <div class="input-group">
+            <label for="gm-last-name">Last Name</label>
+            <input type="text" id="gm-last-name" placeholder="Smith" required autocomplete="family-name">
+          </div>
+        </div>
+        <div class="input-group" style="margin-bottom:1rem;">
+          <label for="gm-email">Email Address</label>
+          <input type="email" id="gm-email" placeholder="jane@example.com" required autocomplete="email">
+        </div>
+        <div class="input-group" style="margin-bottom:1.5rem;">
+          <label for="gm-phone">Phone Number</label>
+          <input type="tel" id="gm-phone" placeholder="+44 7700 900000" autocomplete="tel">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Me the Course Guide <i class="ph-bold ph-arrow-right"></i></button>
+        <p class="privacy-note" style="margin-top:1rem;"><i class="ph-fill ph-lock-key"></i> Your details are secure and won't be shared. <a href="/privacy-policy" style="color:var(--secondary);">Privacy Policy</a></p>
+      </form>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container footer-grid">
