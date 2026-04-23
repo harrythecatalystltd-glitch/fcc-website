@@ -272,7 +272,55 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 10. FAQ Accordion
+    // 10. PT Course Guide Modal
+    const guideModal = document.getElementById('guide-modal');
+    if (guideModal) {
+        const openModal = () => {
+            guideModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            guideModal.querySelector('input').focus();
+        };
+        const closeModal = () => {
+            guideModal.style.display = 'none';
+            document.body.style.overflow = '';
+        };
+
+        document.querySelectorAll('.guide-modal-trigger').forEach(btn => btn.addEventListener('click', openModal));
+        document.getElementById('guide-modal-close').addEventListener('click', closeModal);
+        guideModal.addEventListener('click', (e) => { if (e.target === guideModal) closeModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+        document.getElementById('guide-modal-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const firstName = document.getElementById('gm-first-name').value.trim();
+            const lastName = document.getElementById('gm-last-name').value.trim();
+            const email = document.getElementById('gm-email').value.trim();
+            const phone = document.getElementById('gm-phone').value.trim();
+
+            fetch('/api/quiz-webhook', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: `${firstName} ${lastName}`.trim(),
+                    firstName, lastName, email, phone,
+                    source: 'PT Course Guide - Level 3',
+                    tags: ['course-guide', 'level-3']
+                }),
+                keepalive: true
+            }).catch(() => {});
+
+            document.getElementById('guide-modal-form').innerHTML = `
+                <div style="text-align:center; padding:1.5rem 0;">
+                    <i class="ph-fill ph-check-circle" style="font-size:3rem; color:var(--secondary); display:block; margin-bottom:1rem;"></i>
+                    <h3 style="margin-bottom:0.5rem;">Guide on its way!</h3>
+                    <p style="color:var(--text-body);">Thanks ${firstName}, check your inbox — your Level 3 PT Course Guide is heading your way.</p>
+                </div>`;
+
+            setTimeout(closeModal, 3000);
+        });
+    }
+
+    // 12. FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const btn = item.querySelector('.faq-question');
