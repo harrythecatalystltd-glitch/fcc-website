@@ -210,17 +210,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             };
 
-            const GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/7SAACxzSKnpblPNlayky/webhook-trigger/96766bc8-e57a-4558-bb78-04026ba51742';
-            const body = JSON.stringify(payload);
+            // Proxy via our own Vercel function to avoid CORS issues with GHL
+            fetch('/api/quiz-webhook', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+                keepalive: true
+            }).catch(() => {});
 
-            // sendBeacon is fire-and-forget and survives page navigation
-            if (navigator.sendBeacon) {
-                navigator.sendBeacon(GHL_WEBHOOK, new Blob([body], { type: 'application/json' }));
-            } else {
-                fetch(GHL_WEBHOOK, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body, keepalive: true }).catch(() => {});
-            }
-
-            // Short delay to let beacon dispatch before navigation
+            // Short delay to let request dispatch before navigation
             setTimeout(() => {
                 window.location.href = '/thank-you?course=' + course;
             }, 400);
