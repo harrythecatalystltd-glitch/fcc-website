@@ -309,14 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 keepalive: true
             }).catch(() => {});
 
-            document.getElementById('guide-modal-form').innerHTML = `
-                <div style="text-align:center; padding:1.5rem 0;">
-                    <i class="ph-fill ph-check-circle" style="font-size:3rem; color:var(--secondary); display:block; margin-bottom:1rem;"></i>
-                    <h3 style="margin-bottom:0.5rem;">Guide on its way!</h3>
-                    <p style="color:var(--text-body);">Thanks ${firstName}, check your inbox — your Level 3 PT Course Guide is heading your way.</p>
-                </div>`;
-
-            setTimeout(closeModal, 3000);
+            setTimeout(() => { window.location.href = '/thank-you'; }, 400);
         });
     }
 
