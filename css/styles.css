@@ -964,6 +964,8 @@ a {
         padding-bottom: 1.5rem;
         gap: 2rem;
     }
+
+    .hero-visual { height: auto; }
     
     .hero-title {
         font-size: clamp(2.2rem, 10vw, 3rem);
@@ -1821,6 +1823,13 @@ a {
     .lm-layout { padding: 6rem 1.2rem 3rem; }
     .lm-form-card { padding: 2rem 1.2rem; }
     .legal-content { padding: 6rem 1.2rem 3rem; }
+
+    /* Contact form — reduce inline padding on narrow screens */
+    .contact-form-wrapper { padding: 1.5rem !important; }
+
+    /* About page image — reduce height so full-width crop shows Jamie */
+    .split-visual .image-wrapper { height: 280px !important; }
+    .split-visual .image-wrapper .hero-img { object-position: left center !important; }
 }
 
 /* ── FAQ Section ── */

@@ -74,7 +74,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <link rel="stylesheet" href="/css/styles.css?v=5">
+  <link rel="stylesheet" href="/css/styles.css?v=6">
   <style>
     .loc-row { display:flex; align-items:center; justify-content:space-between; padding:0.65rem 1rem; border-radius:10px; text-decoration:none; transition:background 0.2s; gap:0.75rem; }
     .loc-row.active { background:rgba(30,230,253,0.07); border:1px solid rgba(30,230,253,0.25); }
@@ -83,7 +83,11 @@
     .loc-badge { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; border-radius:999px; padding:0.18rem 0.55rem; white-space:nowrap; }
     .loc-badge.active { color:var(--secondary); background:rgba(30,230,253,0.1); border:1px solid rgba(30,230,253,0.2); }
     .loc-badge.soon { color:#64748b; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); }
-    @media(max-width:640px){ .map-location-layout{ flex-direction:column; align-items:center; } }
+    @media(max-width:640px){
+      .map-location-layout{ flex-direction:column; align-items:stretch; }
+      .map-location-layout > .glass-card { width:100% !important; box-sizing:border-box; }
+      .map-location-layout > div { min-width:0 !important; max-width:100% !important; }
+    }
     #guide-modal input {
       width: 100%; padding: 0.85rem 1rem; background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.12); border-radius: 10px;
