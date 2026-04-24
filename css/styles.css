@@ -1813,10 +1813,10 @@ a {
     .page-hero { padding: 8rem 1.2rem 3rem; }
     .course-grid, .modules-grid, .blog-grid, .team-grid { grid-template-columns: 1fr; }
     .process-steps { grid-template-columns: 1fr; gap: 1.5rem; }
-    .stats-row { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin: 1.5rem 0; }
-    .stat-item { padding: 1.25rem 0.5rem; }
-    .stat-item .stat-num { font-size: clamp(1.4rem, 6vw, 2rem); }
-    .stat-item .stat-label { font-size: 0.78rem; }
+    .stats-row { grid-template-columns: repeat(2, 1fr); gap: 0.25rem; margin: 1rem 0; }
+    .stat-item { padding: 0.75rem 0.25rem; }
+    .stat-item .stat-num { font-size: clamp(1.1rem, 4.5vw, 1.5rem); }
+    .stat-item .stat-label { font-size: 0.72rem; }
     .cta-banner { padding: 3rem 1.2rem; }
     .lm-layout { padding: 6rem 1.2rem 3rem; }
     .lm-form-card { padding: 2rem 1.2rem; }
