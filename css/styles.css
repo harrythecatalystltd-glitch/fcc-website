@@ -1549,9 +1549,15 @@ a {
     color: var(--text-body);
     margin-bottom: 0.25rem;
 }
+.contact-info-item > div:last-child {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
 .contact-info-item p, .contact-info-item a {
     color: var(--text-heading);
     font-weight: 500;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 .contact-info-item a:hover { color: var(--secondary); }
 
