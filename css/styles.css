@@ -1079,6 +1079,31 @@ a {
     }
 }
 
+/* ── Responsive utility grids ── */
+.yt-responsive-grid {
+    grid-template-columns: 1fr 1fr;
+}
+.practical-days-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.modal-name-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+@media (max-width: 640px) {
+    .yt-responsive-grid,
+    .practical-days-grid,
+    .modal-name-row {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Quiz Additions */
 .quiz-layout {
     max-width: 800px;
