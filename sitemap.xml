@@ -3,35 +3,27 @@
 
   <!-- Tier 1: Core pages — highest SEO priority -->
   <url>
-    <loc>https://fitnesscoachchronicle.com/personal-trainer-course-edinburgh/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://fitnesscoachchronicle.com/</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://fitnesscoachchronicle.com/level-3-pt-course-edinburgh/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://fitnesscoachchronicle.com/fast-track-personal-trainer-course-edinburgh/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://fitnesscoachchronicle.com/online-personal-trainer-course-edinburgh/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Core site pages -->
-  <url>
-    <loc>https://fitnesscoachchronicle.com/</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
@@ -66,21 +58,162 @@
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
+  <!-- Blog posts added here once pages are built -->
+
+  <!-- Tier 2: Location pages — East Lothian -->
   <url>
-    <loc>https://fitnesscoachchronicle.com/blog/how-to-become-a-personal-trainer-edinburgh/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fitnesscoachchronicle.com/blog/how-much-do-personal-trainers-earn-edinburgh/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-musselburgh/</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://fitnesscoachchronicle.com/blog/cimspa-vs-reps-personal-trainer/</loc>
-    <lastmod>2026-02-20</lastmod>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-portobello/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-prestonpans/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-cockenzie/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-longniddry/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-tranent/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-haddington/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-north-berwick/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Tier 2: Location pages — Midlothian -->
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-dalkeith/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-bonnyrigg/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-loanhead/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-penicuik/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-gorebridge/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Tier 2: Location pages — West Lothian -->
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-broxburn/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-livingston/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-linlithgow/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-bathgate/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-whitburn/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-armadale/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Tier 2: Location pages — Fife & Forth Valley -->
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-south-queensferry/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-inverkeithing/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-rosyth/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-dunfermline/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-kirkcaldy/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fitnesscoachchronicle.com/level-3-pt-course-falkirk/</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
