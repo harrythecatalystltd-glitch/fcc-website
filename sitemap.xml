@@ -54,11 +54,16 @@
   <!-- Blog -->
   <url>
     <loc>https://fitnesscoachchronicle.com/blog/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
-  <!-- Blog posts added here once pages are built -->
+  <url>
+    <loc>https://fitnesscoachchronicle.com/blog/how-to-become-a-personal-trainer-edinburgh/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Tier 2: Location pages — East Lothian -->
   <url>
