@@ -124,7 +124,7 @@ a {
 .logo-img {
     height: 40px;
     width: auto;
-    filter: brightness(1.2);
+    filter: brightness(0) invert(1);
 }
 
 .nav-links {

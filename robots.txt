@@ -1,9 +1,8 @@
 User-agent: *
 Allow: /
 
-# Block admin/utility pages from indexing
+# Block utility pages from indexing
 Disallow: /thank-you
-Disallow: /free-suitability-quiz
 
 # AI/LLM crawlers — allow for brand visibility in AI search
 User-agent: GPTBot
