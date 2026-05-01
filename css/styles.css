@@ -121,10 +121,19 @@ a {
     align-items: center;
 }
 
+.logo a {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
 .logo-img {
-    height: 40px;
+    height: 36px;
     width: auto;
-    filter: brightness(0) invert(1);
+    max-width: 180px;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -791,8 +800,13 @@ a {
 }
 
 .footer-logo {
-    height: 40px;
-    filter: brightness(1.2);
+    height: 36px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 5px 10px;
     margin-bottom: 1.5rem;
 }
 
@@ -1249,6 +1263,13 @@ a {
         padding: 0.8rem 0;
         border-bottom: 1px solid var(--surface-border);
         font-size: 1.1rem;
+    }
+    .logo-img {
+        height: 30px;
+        max-width: 140px;
+    }
+    .logo a {
+        padding: 4px 8px;
     }
 }
 
