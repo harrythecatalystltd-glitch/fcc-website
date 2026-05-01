@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 36" role="img" aria-label="The Fitness Coach Chronicle">
+  <!-- FCC monogram -->
+  <text x="0" y="30" font-family="'Arial Black','Helvetica Neue',sans-serif" font-weight="900" font-size="34" fill="#000" letter-spacing="-1">FCC</text>
+  <!-- Divider -->
+  <rect x="74" y="4" width="1.5" height="28" fill="#000" opacity="0.35"/>
+  <!-- Stacked wordmark -->
+  <text x="83" y="17" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="8.5" fill="#000" letter-spacing="2">FITNESS COACH</text>
+  <text x="83" y="29" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="8.5" fill="#000" letter-spacing="2">CHRONICLE</text>
+</svg>
